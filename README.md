@@ -1,46 +1,49 @@
-# Astro Starter Kit: Basics
+# DKT - Fikirlerin Ağırlığı Yoktur
 
-```sh
-npm create astro@latest -- --template basics
+> "Fikirlerin Ağırlığı Yoktur, Havada Süzülürler."
+
+DKT, okuyan, düşünen ve üretenlerin buluşma noktası olarak tasarlanmış modern bir web platformudur.
+
+## 🚀 Proje Hakkında
+
+Bu proje, modern web teknolojileri kullanılarak geliştirilmiş, görsel olarak zengin ve etkileşimli bir deneyim sunar.
+
+### 🛠️ Teknolojiler
+
+- **[Astro](https://astro.build/)**: Performans odaklı web framework'ü.
+- **[React](https://react.dev/)**: Kullanıcı arayüzü bileşenleri için.
+- **[Tailwind CSS v4](https://tailwindcss.com/)**: Modern ve esnek stillendirme.
+- **[Lucide React](https://lucide.dev/)**: Tutarlı ve şık ikon seti.
+
+## ✨ Özellikler
+
+- **Modern ve Duyarlı Tasarım**: Her cihazda kusursuz görünüm.
+- **Antigravity Animasyonları**: Özel hazırlanmış görsel efektler.
+- **Modüler Yapı**:
+  - 📚 **Kitap / Okuma Bölümü**
+  - 🧠 **Beyin Fırtınası / Düşünce Alanı**
+  - 🤝 **Etkileşim ve Paylaşım**
+  - ✍️ **Atölye ve Üretim**
+
+## 🧞 Başlangıç
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
+
+```bash
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Sunucu `http://localhost:4321` adresinde çalışacaktır.
 
-## 🚀 Project Structure
+## 📜 Komutlar
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Komut               | Açıklama                                        |
+| :------------------ | :---------------------------------------------- |
+| `npm run dev`       | Geliştirme sunucusunu başlatır                  |
+| `npm run build`     | Üretim için derleme yapar (`./dist/` klasörüne) |
+| `npm run preview`   | Derlenen projeyi önizler                        |
+| `npm run astro ...` | `astro add`, `astro check` gibi CLI komutları   |
