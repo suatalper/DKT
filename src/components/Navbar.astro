@@ -11,44 +11,43 @@ const links = [
 ];
 ---
 
-<nav class="fixed top-0 w-full z-50 bg-[#2c1810] border-b-4 border-double border-accent/40 shadow-soft transition-all duration-300">
+<nav class="fixed top-0 w-full z-50 bg-white border-b-4 border-black transition-all duration-300">
   <div class="container mx-auto px-6 h-24 flex items-center justify-between">
     <!-- Logo -->
-    <a href="#" class="text-3xl font-serif font-bold flex items-center gap-3 group">
-      <div class="w-12 h-12 bg-vintage-200 rounded-sm border-2 border-secondary flex items-center justify-center text-secondary shadow-md group-hover:rotate-3 transition-transform duration-300">
-        <span class="font-bold text-xl font-serif">DKT</span>
+    <a href="#" class="text-3xl font-black italic flex items-center gap-2 group transform hover:-rotate-2 transition-transform">
+      <div class="w-12 h-12 bg-primary border-4 border-black flex items-center justify-center text-black shadow-brutal transition-transform group-hover:translate-x-1 group-hover:translate-y-1 group-hover:shadow-none">
+        <span class="font-bold text-xl">DKT</span>
       </div>
-      <span class="text-vintage-100 group-hover:text-accent transition-colors tracking-wide">Düşünce<span class="text-accent">.</span></span>
+      <span class="text-black tracking-tighter">Düşünce<span class="text-secondary">.</span></span>
     </a>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex items-center gap-8">
+    <div class="hidden md:flex items-center gap-6">
       {links.map((link) => (
-        <a href={link.href} class="text-vintage-200 hover:text-accent font-mono text-sm tracking-wider uppercase transition-colors relative group py-1">
+        <a href={link.href} class="text-black font-bold uppercase tracking-wider hover:bg-accent hover:text-black px-2 py-1 transition-colors border-2 border-transparent hover:border-black hover:shadow-brutal-sm">
           {link.name}
-          <span class="absolute bottom-0 left-0 w-0 h-px bg-accent transition-all group-hover:w-full"></span>
         </a>
       ))}
       
-      <a href="#" class="px-6 py-3 bg-secondary hover:bg-secondary-hover text-vintage-50 rounded-sm border border-accent/30 font-serif italic text-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+      <a href="#" class="px-6 py-3 bg-secondary text-white font-bold border-4 border-black shadow-brutal hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all uppercase">
         Katıl
       </a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="md:hidden text-vintage-200 hover:text-accent focus:outline-none">
+    <button id="menu-toggle" class="md:hidden text-black hover:text-secondary focus:outline-none border-4 border-black p-1 shadow-brutal active:shadow-none active:translate-x-1 active:translate-y-1 transition-all">
       <Menu className="w-8 h-8" />
     </button>
   </div>
 
   <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-[#2c1810]/95 backdrop-blur-sm z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col items-center justify-center gap-8 border-l-4 border-double border-accent">
-    <button id="menu-close" class="absolute top-6 right-6 text-vintage-200 hover:text-accent">
-      <X className="w-10 h-10" />
+  <div id="mobile-menu" class="fixed inset-0 bg-accent z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8 border-l-4 border-black">
+    <button id="menu-close" class="absolute top-6 right-6 bg-white border-4 border-black p-2 shadow-brutal hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-black">
+      <X className="w-8 h-8" />
     </button>
     
     {links.map((link) => (
-       <a href={link.href} class="text-3xl font-serif text-vintage-100 hover:text-accent italic">
+       <a href={link.href} class="text-4xl font-black text-black hover:text-white hover:underline decoration-4 decoration-black uppercase transform hover:rotate-2 transition-transform">
          {link.name}
        </a>
     ))}

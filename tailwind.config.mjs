@@ -5,54 +5,48 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#1a252f", // Darker Ink Blue (nearly black)
-          hover: "#2c3e50",
+          DEFAULT: "#00E5FF", // Vivid Turquoise
+          hover: "#00B8D4",
         },
         secondary: {
-          DEFAULT: "#6b0f0f", // Darker Maroon
-          hover: "#800000",
+          DEFAULT: "#FF0040", // Vivid Maroon/Red
+          hover: "#D50032",
         },
         accent: {
-          DEFAULT: "#b08d45", // Darker Antique Gold for text visibility
-          hover: "#c5a059",
+          DEFAULT: "#FACC15", // Bright Yellow
+          purple: "#A855F7", // Vivid Purple
         },
-        vintage: {
-          50: "#fdfbf7", // Old Paper Light
-          100: "#f5f5dc", // Old Paper Darker
-          200: "#e6e2d3",
-          900: "#1a1a1a", // Deep Charcoal
+        neutral: {
+          50: "#FEFCE8", // Pale Yellow / Off-white
+          100: "#F3F4F6", // Light Gray
+          900: "#111827", // Almost Black
         },
-        "dark-bg": "#fdfbf7", // Replaced with Old Paper for compat
-        "dark-surface": "#f5f5dc", // Replaced with Beige for compat
-        "text-main": "#1a252f", // Replaced with Dark Ink
-        "text-muted": "#3e2723", // Much Darker Sepia/Brown
+        "dark-bg": "#FEFCE8", // Replaced with Pale Yellow for compat
+        "dark-surface": "#FFFFFF", // Replaced with White for compat
+        "text-main": "#000000", // Black
+        "text-muted": "#374151", // Dark Gray
       },
       fontFamily: {
-        serif: ["'Playfair Display'", "serif"],
-        mono: ["'Courier Prime'", "monospace"],
-        sans: ["'Inter'", "sans-serif"],
+        sans: ["'Poppins'", "sans-serif"],
+        display: ["'Clash Display'", "sans-serif"],
+      },
+      boxShadow: {
+        brutal: "4px 4px 0px 0px rgba(0,0,0,1)",
+        "brutal-lg": "8px 8px 0px 0px rgba(0,0,0,1)",
+        "brutal-sm": "2px 2px 0px 0px rgba(0,0,0,1)",
+      },
+      backgroundImage: {
+        "grid-pattern":
+          "url('https://www.transparenttextures.com/patterns/graphy.png')",
       },
       keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" }, // Reduced movement for heavier feel
-        },
-        "pulse-slow": {
-          "0%, 100%": { opacity: "0.8" },
-          "50%": { opacity: "1" },
-        },
-        shimmer: {
-          "100%": { transform: "translateX(100%)" },
+        shake: {
+          "0%, 100%": { transform: "rotate(-1deg)" },
+          "50%": { transform: "rotate(1deg)" },
         },
       },
       animation: {
-        float: "float 8s ease-in-out infinite",
-        "pulse-slow": "pulse-slow 6s ease-in-out infinite",
-        shimmer: "shimmer 2s infinite",
-      },
-      backgroundImage: {
-        "paper-texture":
-          "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+        shake: "shake 0.5s ease-in-out infinite",
       },
     },
   },
