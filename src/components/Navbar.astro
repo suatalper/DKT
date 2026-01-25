@@ -1,0 +1,72 @@
+---
+import { Menu, X } from 'lucide-react';
+
+const links = [
+  { name: 'Anasayfa', href: '#' },
+  { name: 'İncelemeler', href: '#book-section' },
+  { name: 'Fikirler', href: '#brain-section' },
+  { name: 'Etkinlikler', href: '#interaction-section' },
+  { name: 'Atölyeler', href: '#workshops-section' },
+  { name: 'Hakkımızda', href: '#about-section' },
+];
+---
+
+<nav class="fixed top-0 w-full z-50 bg-dark-bg/80 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+  <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="text-2xl font-bold flex items-center gap-2 group">
+      <div class="w-10 h-10 bg-linear-to-br from-primary to-primary-hover rounded-lg flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+        <span class="font-bold text-lg">DKT</span>
+      </div>
+      <span class="text-white group-hover:text-primary transition-colors">Düşünce<span class="text-primary">.</span></span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-8">
+      {links.map((link) => (
+        <a href={link.href} class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+          {link.name}
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+        </a>
+      ))}
+      
+      <a href="#" class="px-5 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg font-medium transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 ml-4">
+        Katıl
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+      <Menu className="w-8 h-8" />
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-dark-bg/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-white">
+      <X className="w-10 h-10" />
+    </button>
+    
+    {links.map((link) => (
+       <a href={link.href} class="text-2xl font-medium text-gray-300 hover:text-white">
+         {link.name}
+       </a>
+    ))}
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const links = document.querySelectorAll('#mobile-menu a');
+
+  function toggleMenu() {
+    mobileMenu?.classList.toggle('translate-x-full');
+    document.body.classList.toggle('overflow-hidden');
+  }
+
+  menuToggle?.addEventListener('click', toggleMenu);
+  menuClose?.addEventListener('click', toggleMenu);
+  links.forEach(link => link.addEventListener('click', toggleMenu));
+</script>

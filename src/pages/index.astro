@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import SectionBook from '../components/SectionBook.astro';
+import SectionBrain from '../components/SectionBrain.astro';
+import SectionInteraction from '../components/SectionInteraction.astro';
+import SectionPen from '../components/SectionPen.astro';
+import SectionWorkshops from '../components/SectionWorkshops.astro';
+import SectionAbout from '../components/SectionAbout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar />
+  
+  <main class="grow">
+    <Hero />
+    <SectionBook />
+    <SectionBrain />
+    <SectionInteraction />
+    <SectionPen />
+    <SectionWorkshops />
+    <SectionAbout />
+  </main>
+
+  <Footer />
+</Layout>

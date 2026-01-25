@@ -1,0 +1,68 @@
+---
+import { PenTool, Feather, Send } from 'lucide-react';
+---
+
+<section id="pen-section" class="py-24 bg-dark-bg/50 border-y border-white/5">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center gap-4 mb-16">
+      <div class="p-3 bg-secondary/20 rounded-xl">
+        <PenTool className="w-8 h-8 text-secondary" />
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-white">Yazın & Üretim</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Creative Writing Challenge (Prominent Card) -->
+        <div class="lg:col-span-1">
+             <div class="h-full bg-linear-to-br from-secondary/20 to-dark-surface p-8 rounded-2xl border border-secondary/30 relative overflow-hidden group">
+                 <div class="absolute -right-10 -top-10 w-40 h-40 bg-secondary/20 rounded-full blur-[60px] group-hover:bg-secondary/40 transition-all"></div>
+                 
+                 <div class="relative z-10 flex flex-col h-full">
+                     <div class="flex items-center gap-2 mb-6">
+                         <Feather className="w-6 h-6 text-secondary" />
+                         <span class="text-secondary font-bold tracking-wider uppercase text-sm">Haftanın Meydan Okuması</span>
+                     </div>
+                     
+                     <h3 class="text-2xl font-bold text-white mb-4">"Sessizliğin Sesi"</h3>
+                     <p class="text-gray-300 leading-relaxed mb-8 grow">
+                         Bu hafta, hiç konuşmadan anlaşan iki karakterin hikayesini yazıyoruz. 
+                         Maksimum 500 kelime.
+                     </p>
+                     
+                     <div class="space-y-4">
+                         <div class="flex justify-between text-sm text-text-muted">
+                             <span>Kalan Süre:</span>
+                             <span class="text-white font-mono">2 Gün 4 Saat</span>
+                         </div>
+                         <button class="w-full py-3 bg-secondary hover:bg-secondary-hover text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-secondary/40 flex items-center justify-center gap-2">
+                             <Send className="w-4 h-4" />
+                             Hikayeni Gönder
+                         </button>
+                     </div>
+                 </div>
+             </div>
+        </div>
+
+        <!-- User Blogs -->
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((i) => (
+                <div class="bg-dark-surface p-6 rounded-2xl border border-white/5 hover:border-white/20 transition-all group hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-full bg-linear-to-br from-gray-700 to-gray-900"></div>
+                        <div>
+                            <h5 class="text-sm font-bold text-white">Kullanıcı {i}</h5>
+                            <span class="text-xs text-text-muted">2 saat önce</span>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-200 mb-2 group-hover:text-primary transition-colors">Modern Çağda Stoacılık</h4>
+                    <p class="text-sm text-text-muted line-clamp-3">
+                        Günümüzün kaosunda iç huzuru bulmak için antik öğretilere nasıl dönebiliriz? 
+                        Marcus Aurelius'un günlüklerinden notlar...
+                    </p>
+                    <a href="#" class="inline-block mt-4 text-sm text-primary hover:text-white transition-colors">Devamını Oku</a>
+                </div>
+            ))}
+        </div>
+    </div>
+  </div>
+</section>
