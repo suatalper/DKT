@@ -11,44 +11,44 @@ const links = [
 ];
 ---
 
-<nav class="fixed top-0 w-full z-50 bg-dark-bg/80 backdrop-blur-md border-b border-white/10 transition-all duration-300">
-  <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+<nav class="fixed top-0 w-full z-50 bg-[#2c1810] border-b-4 border-double border-accent/40 shadow-soft transition-all duration-300">
+  <div class="container mx-auto px-6 h-24 flex items-center justify-between">
     <!-- Logo -->
-    <a href="#" class="text-2xl font-bold flex items-center gap-2 group">
-      <div class="w-10 h-10 bg-linear-to-br from-primary to-primary-hover rounded-lg flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300">
-        <span class="font-bold text-lg">DKT</span>
+    <a href="#" class="text-3xl font-serif font-bold flex items-center gap-3 group">
+      <div class="w-12 h-12 bg-vintage-200 rounded-sm border-2 border-secondary flex items-center justify-center text-secondary shadow-md group-hover:rotate-3 transition-transform duration-300">
+        <span class="font-bold text-xl font-serif">DKT</span>
       </div>
-      <span class="text-white group-hover:text-primary transition-colors">Düşünce<span class="text-primary">.</span></span>
+      <span class="text-vintage-100 group-hover:text-accent transition-colors tracking-wide">Düşünce<span class="text-accent">.</span></span>
     </a>
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center gap-8">
       {links.map((link) => (
-        <a href={link.href} class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+        <a href={link.href} class="text-vintage-200 hover:text-accent font-mono text-sm tracking-wider uppercase transition-colors relative group py-1">
           {link.name}
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+          <span class="absolute bottom-0 left-0 w-0 h-px bg-accent transition-all group-hover:w-full"></span>
         </a>
       ))}
       
-      <a href="#" class="px-5 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg font-medium transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 ml-4">
+      <a href="#" class="px-6 py-3 bg-secondary hover:bg-secondary-hover text-vintage-50 rounded-sm border border-accent/30 font-serif italic text-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
         Katıl
       </a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+    <button id="menu-toggle" class="md:hidden text-vintage-200 hover:text-accent focus:outline-none">
       <Menu className="w-8 h-8" />
     </button>
   </div>
 
   <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-dark-bg/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
-    <button id="menu-close" class="absolute top-6 right-6 text-gray-400 hover:text-white">
+  <div id="mobile-menu" class="fixed inset-0 bg-[#2c1810]/95 backdrop-blur-sm z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col items-center justify-center gap-8 border-l-4 border-double border-accent">
+    <button id="menu-close" class="absolute top-6 right-6 text-vintage-200 hover:text-accent">
       <X className="w-10 h-10" />
     </button>
     
     {links.map((link) => (
-       <a href={link.href} class="text-2xl font-medium text-gray-300 hover:text-white">
+       <a href={link.href} class="text-3xl font-serif text-vintage-100 hover:text-accent italic">
          {link.name}
        </a>
     ))}

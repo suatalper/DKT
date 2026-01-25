@@ -2,31 +2,32 @@
 import { Github, Twitter, Instagram } from 'lucide-react';
 ---
 
-<footer class="bg-dark-surface border-t-2 border-secondary/50 pt-16 pb-8 mt-auto">
-  <div class="container mx-auto px-6">
+<footer class="bg-vintage-200 border-t-2 border-primary/20 pt-16 pb-8 mt-auto relative">
+  <div class="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply"></div>
+  <div class="container mx-auto px-6 relative z-10">
     <div class="flex flex-col md:flex-row justify-between items-center mb-12">
       <!-- Logo & Desc -->
       <div class="mb-8 md:mb-0 text-center md:text-left">
-        <h2 class="text-2xl font-bold text-white mb-2">DKT<span class="text-primary">.</span></h2>
-        <p class="text-text-muted text-sm">Fikirlerin ve kitapların buluşma noktası.</p>
+        <h2 class="text-2xl font-serif font-bold text-primary mb-2">DKT<span class="text-secondary">.</span></h2>
+        <p class="text-text-muted text-sm font-mono tracking-wide">Fikirlerin ve kitapların buluşma noktası.</p>
       </div>
 
       <!-- Social Links -->
       <div class="flex items-center gap-6">
-        <a href="#" class="text-text-muted hover:text-primary transition-colors transform hover:scale-110">
+        <a href="#" class="text-primary hover:text-secondary transition-colors transform hover:scale-110">
           <Twitter className="w-5 h-5" />
         </a>
-        <a href="#" class="text-text-muted hover:text-primary transition-colors transform hover:scale-110">
+        <a href="#" class="text-primary hover:text-secondary transition-colors transform hover:scale-110">
           <Github className="w-5 h-5" />
         </a>
-        <a href="#" class="text-text-muted hover:text-primary transition-colors transform hover:scale-110">
+        <a href="#" class="text-primary hover:text-secondary transition-colors transform hover:scale-110">
           <Instagram className="w-5 h-5" />
         </a>
       </div>
     </div>
 
     <!-- Copyright -->
-    <div class="border-t border-white/5 pt-8 text-center text-sm text-text-muted">
+    <div class="border-t border-primary/20 pt-8 text-center text-xs font-mono text-primary/80 font-bold">
       <p>&copy; {new Date().getFullYear()} Düşünce ve Kitap Topluluğu. Tüm hakları saklıdır.</p>
     </div>
   </div>

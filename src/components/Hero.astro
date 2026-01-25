@@ -2,55 +2,57 @@
 import { ArrowRight, BookOpen, Brain, PenTool } from 'lucide-react';
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-  <!-- Deep Space Background -->
-  <div class="absolute inset-0 z-0 bg-dark-bg">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] animate-pulse-slow"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] animate-pulse-slow delay-1000"></div>
-  </div>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
+  <!-- Vintage Paper Background (Global body has texture, this adds overlay depth) -->
+  <div class="absolute inset-0 z-0 opacity-5 pointer-events-none bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-secondary/20 to-transparent"></div>
 
-  <!-- Floating Icons (Antigravity Effect) -->
-  <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
-    <div class="absolute top-1/3 left-[10%] animate-float" style="animation-duration: 8s;">
-      <BookOpen className="w-24 h-24 text-primary transform -rotate-12" />
+  <!-- Engraved Illustrations (Stationary or slow float) -->
+  <div class="absolute inset-0 z-0 pointer-events-none select-none">
+    <!-- Big Brain -->
+    <div class="absolute top-1/4 right-[5%] w-[400px] h-[400px] opacity-15 rotate-12 mix-blend-multiply animate-float" style="animation-duration: 12s;">
+      <img src="/images/engraved-brain.png" alt="Vintage Brain Illustration" class="w-full h-full object-contain drop-shadow-xl" />
     </div>
-    <div class="absolute top-1/4 right-[15%] animate-float" style="animation-duration: 10s; animation-delay: 1s;">
-      <Brain className="w-32 h-32 text-white transform rotate-6" />
-    </div>
-    <div class="absolute bottom-1/3 left-[20%] animate-float" style="animation-duration: 12s; animation-delay: 2s;">
-      <PenTool className="w-20 h-20 text-secondary transform -rotate-45" />
+    
+    <!-- Open Book -->
+    <div class="absolute bottom-1/4 left-[5%] w-[350px] h-[350px] opacity-15 -rotate-6 mix-blend-multiply animate-float" style="animation-duration: 15s; animation-delay: 2s;">
+       <img src="/images/engraved-book.png" alt="Vintage Book Illustration" class="w-full h-full object-contain drop-shadow-xl" />
     </div>
   </div>
 
   <div class="container mx-auto px-6 relative z-10 text-center">
     
+    <!-- Decorative Line -->
+    <div class="w-24 h-1 bg-secondary mx-auto mb-8 rounded-full opacity-60"></div>
+
     <!-- Headline -->
-    <div class="mb-8">
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
-        <span class="bg-clip-text text-transparent bg-linear-to-r from-primary via-white to-secondary">
-          Fikirlerin Ağırlığı Yoktur,
-        </span>
-        <br />
-        <span class="text-white">Havada Süzülürler.</span>
+    <div class="mb-10 space-y-4">
+      <h1 class="text-5xl md:text-8xl font-serif font-bold tracking-tight leading-tight text-primary drop-shadow-sm">
+        <span class="block text-secondary text-4xl md:text-5xl italic mb-2 font-normal">Fikirlerin Ağırlığı Yoktur,</span>
+        Havada Süzülürler.
       </h1>
       
-      <p class="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto font-light leading-relaxed">
+      <p class="text-xl md:text-2xl text-primary max-w-2xl mx-auto font-mono mt-6 border-y border-dashed border-secondary/30 py-4 font-medium">
         Okuyan, düşünen ve üretenlerin buluşma noktası.
       </p>
     </div>
 
     <!-- CTA Buttons -->
     <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-      <a href="#join" class="group relative px-8 py-4 bg-primary text-white rounded-xl font-semibold text-lg overflow-hidden shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:shadow-primary/40">
-        <div class="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
-        <span class="flex items-center gap-2">
-          Topluluğa Katıl <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+      <a href="#join" class="group relative px-10 py-4 bg-transparent border-2 border-primary text-primary hover:text-vintage-50 hover:bg-primary rounded-sm font-serif font-bold text-xl transition-all shadow-[4px_4px_0px_0px_rgba(44,62,80,0.2)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
+        <span class="flex items-center gap-3">
+          Topluluğa Katıl <PenTool className="w-5 h-5" />
         </span>
       </a>
 
-      <a href="#workshops-section" class="px-8 py-4 bg-transparent border-2 border-secondary text-white rounded-xl font-semibold text-lg hover:bg-secondary/10 hover:border-secondary transition-all flex items-center gap-2">
+      <a href="#workshops-section" class="px-10 py-4 bg-transparent border-b-2 border-secondary text-secondary font-mono italic text-lg hover:text-primary hover:border-primary transition-colors flex items-center gap-2">
+        <BookOpen className="w-5 h-5" />
         Atölyeleri İncele
       </a>
+    </div>
+    
+    <!-- Decorative date/metadata -->
+    <div class="mt-16 text-center">
+        <span class="font-mono text-sm text-primary/80 tracking-[0.2em] uppercase font-bold">Est. 2024 &bull; Kütüphane &bull; Atölye</span>
     </div>
   </div>
 </section>

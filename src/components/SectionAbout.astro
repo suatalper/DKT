@@ -2,42 +2,46 @@
 import { Anchor } from 'lucide-react';
 ---
 
-<section id="about-section" class="py-24 bg-dark-bg relative overflow-hidden flex items-center justify-center text-center">
+<section id="about-section" class="py-24 bg-vintage-50 relative overflow-hidden flex items-center justify-center text-center">
   <!-- Background Decor -->
-  <div class="absolute inset-0 z-0">
-     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[128px]"></div>
+  <div class="absolute inset-0 z-0 opacity-30">
+     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[128px]"></div>
   </div>
+  
+  <div class="absolute inset-0 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-40 mix-blend-multiply"></div>
 
   <div class="container mx-auto px-6 relative z-10 max-w-4xl">
       <div class="mb-8 flex justify-center">
-         <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 rotate-45">
-            <Anchor className="w-8 h-8 text-white -rotate-45" />
+         <div class="w-16 h-16 bg-vintage-200 rounded-sm flex items-center justify-center border-2 border-secondary rotate-45 shadow-md">
+            <Anchor className="w-8 h-8 text-secondary -rotate-45" />
          </div>
       </div>
       
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Biz Kimiz?</h2>
+      <h2 class="text-3xl md:text-5xl font-serif font-bold text-primary mb-8 leading-tight">Biz Kimiz?</h2>
       
-      <p class="text-lg md:text-2xl text-gray-300 leading-relaxed font-light mb-12">
-        "Düşünce ve Kitap Topluluğu, entelektüel üretimin tüketimden daha değerli olduğuna inananların limanıdır. 
-        Amacımız, fikirlerin çarpıştığı ama asla incitmediği, derinliğin sığlığa galip geldiği bir alan yaratmaktır."
+      <p class="text-lg md:text-2xl text-text-muted leading-relaxed font-serif font-light mb-12 italic relative">
+        <span class="absolute -top-4 -left-4 text-6xl text-secondary/20 font-serif">"</span>
+        Düşünce ve Kitap Topluluğu, entelektüel üretimin tüketimden daha değerli olduğuna inananların limanıdır. 
+        Amacımız, fikirlerin çarpıştığı ama asla incitmediği, derinliğin sığlığa galip geldiği bir alan yaratmaktır.
+        <span class="absolute -bottom-12 -right-4 text-6xl text-secondary/20 font-serif">"</span>
       </p>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t-2 border-secondary/10 pt-12">
           <div>
-             <span class="block text-3xl font-bold text-primary mb-2">5K+</span>
-             <span class="text-sm text-text-muted">Aktif Üye</span>
+             <span class="block text-3xl font-bold font-serif text-primary mb-2">5K+</span>
+             <span class="text-sm font-mono text-secondary uppercase tracking-widest">Aktif Üye</span>
           </div>
           <div>
-             <span class="block text-3xl font-bold text-secondary mb-2">120+</span>
-             <span class="text-sm text-text-muted">Atölye</span>
+             <span class="block text-3xl font-bold font-serif text-secondary mb-2">120+</span>
+             <span class="text-sm font-mono text-secondary uppercase tracking-widest">Atölye</span>
           </div>
            <div>
-             <span class="block text-3xl font-bold text-white mb-2">850+</span>
-             <span class="text-sm text-text-muted">Kitap Analizi</span>
+             <span class="block text-3xl font-bold font-serif text-primary mb-2">850+</span>
+             <span class="text-sm font-mono text-secondary uppercase tracking-widest">Analiz</span>
           </div>
            <div>
-             <span class="block text-3xl font-bold text-white mb-2">∞</span>
-             <span class="text-sm text-text-muted">Fikir</span>
+             <span class="block text-3xl font-bold font-serif text-secondary mb-2">∞</span>
+             <span class="text-sm font-mono text-secondary uppercase tracking-widest">Fikir</span>
           </div>
       </div>
   </div>

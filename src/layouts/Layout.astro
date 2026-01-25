@@ -11,16 +11,16 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Düşünce ve Kitap Topluluğu</title>
         
-        <!-- Google Fonts: Inter -->
+        <!-- Google Fonts: Playfair Display (Serif) & Courier Prime (Mono) & Inter (Sans) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
         
         <script is:inline>
             // Optional: Add any inline scripts here if needed
         </script>
 	</head>
-	<body class="bg-dark-bg text-white font-sans min-h-screen flex flex-col">
+	<body class="bg-vintage-50 text-primary font-serif min-h-screen flex flex-col antialiased selection:bg-secondary/20 selection:text-secondary bg-paper-texture">
 		<slot />
 	</body>
 </html>
