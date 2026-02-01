@@ -1,83 +1,76 @@
 ---
-import { Calendar, MessageCircle, Hash } from 'lucide-react';
+import { Calendar, MessageCircle, Hash, Zap } from 'lucide-react';
 
 const events = [
-  { day: "15", month: "OCT", title: "Felsefe Atölyesi: Stoacılık", time: "20:00", type: "Online" },
-  { day: "22", month: "OCT", title: "Kitap Kulübü: 1984", time: "19:00", type: "İstanbul" },
-  { day: "29", month: "OCT", title: "Yaratıcı Yazarlık Semineri", time: "14:00", type: "Online" },
+  { day: "15", month: "Ekim", title: "Stoacılık Atölyesi", time: "20:00", type: "Online" },
+  { day: "22", month: "Ekim", title: "Kitap Kulübü: 1984", time: "19:00", type: "İstanbul" },
+  { day: "29", month: "Ekim", title: "Yaratıcı Yazarlık", time: "14:00", type: "Online" },
 ];
 
 const discussions = [
-  { title: "Yapay Zeka Sanatı Öldürüyor mu?", replies: 124, tag: "Teknoloji" },
+  { title: "Yapay Zeka Sanatı Öldürüyor mu?", replies: 124, tag: "Tekno" },
   { title: "Varoluşçu Edebiyatın Geleceği", replies: 89, tag: "Edebiyat" },
-  { title: "Antik Yunan'da Adalet Kavramı", replies: 56, tag: "Felsefe" },
-  { title: "Distopya mı Ütopya mı?", replies: 210, tag: "Genel" },
+  { title: "Antik Yunan'da Adalet", replies: 56, tag: "Felsefe" },
 ];
 ---
 
-<section id="interaction-section" class="py-24 bg-white relative">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col items-center mb-16 text-center">
-      <h2 class="text-3xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">Konuşma & Etkileşim</h2>
-      <p class="text-neutral-500 max-w-2xl mx-auto font-sans">Topluluğun kalbi burada atıyor.</p>
-    </div>
-
+<section id="interaction-section" class="py-24 bg-slate-900 border-t border-white/5">
+  <div class="container mx-auto px-6 max-w-6xl">
+    
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <!-- Event Calendar -->
+        <!-- Event List -->
         <div>
             <div class="flex items-center gap-3 mb-8">
-                <Calendar className="w-5 h-5 text-primary" />
-                <h3 class="text-xl font-bold text-neutral-900 border-b border-neutral-100 pb-2 flex-grow">Etkinlik Takvimi</h3>
+                <div class="p-2 bg-teal-500/20 rounded-lg">
+                    <Calendar className="w-6 h-6 text-teal-400" />
+                </div>
+                <h3 class="text-3xl font-black text-white tracking-tight">ETKİNLİKLER</h3>
             </div>
 
             <div class="space-y-4">
                 {events.map((event) => (
-                    <div class="group flex items-center gap-6 bg-white p-4 rounded-xl border border-neutral-100 hover:border-primary/30 transition-all hover:shadow-md cursor-pointer">
-                        <div class="flex flex-col items-center justify-center w-14 h-14 bg-neutral-50 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors text-neutral-700">
-                            <span class="text-[10px] font-bold uppercase tracking-wider">{event.month}</span>
-                            <span class="text-lg font-bold leading-none">{event.day}</span>
+                    <div class="group flex items-center gap-6 bg-white/5 p-6 rounded-2xl border border-white/5 hover:bg-white/10 hover:border-teal-500/30 transition-all cursor-pointer">
+                        <div class="flex flex-col items-center justify-center w-16 h-16 bg-slate-800 rounded-xl text-white font-black shadow-lg">
+                            <span class="text-2xl leading-none">{event.day}</span>
+                            <span class="text-[10px] uppercase text-slate-500">{event.month.substring(0,3)}</span>
                         </div>
                         <div class="flex-1">
-                            <h4 class="text-base font-bold text-neutral-800 group-hover:text-primary transition-colors">{event.title}</h4>
-                            <div class="flex items-center gap-4 text-xs font-medium text-neutral-400 mt-1">
+                            <h4 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors mb-1">{event.title}</h4>
+                            <div class="flex items-center gap-3 text-xs font-bold text-slate-500 uppercase tracking-wider">
                                 <span>{event.time}</span>
-                                <span class="w-1 h-1 bg-neutral-300 rounded-full"></span>
-                                <span>{event.type}</span>
+                                <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+                                <span class="text-teal-500">{event.type}</span>
                             </div>
                         </div>
+                        <Zap class="w-5 h-5 text-slate-600 group-hover:text-yellow-400 transition-colors" />
                     </div>
                 ))}
             </div>
-            
-             <button class="mt-6 text-primary hover:text-primary-hover font-medium text-sm flex items-center gap-2 transition-colors">
-                Tüm Etkinlikleri Gör →
-            </button>
         </div>
 
-        <!-- Forum Highlights -->
+        <!-- Forum List -->
         <div>
             <div class="flex items-center gap-3 mb-8">
-                <Hash className="w-5 h-5 text-accent" />
-                <h3 class="text-xl font-bold text-neutral-900 border-b border-neutral-100 pb-2 flex-grow">Gündemdeki Tartışmalar</h3>
+                <div class="p-2 bg-red-500/20 rounded-lg">
+                    <Hash className="w-6 h-6 text-red-500" />
+                </div>
+                <h3 class="text-3xl font-black text-white tracking-tight">TARTIŞMALAR</h3>
             </div>
 
-            <div class="bg-neutral-50 rounded-2xl border border-neutral-100 overflow-hidden">
+            <div class="space-y-4">
                 {discussions.map((topic) => (
-                    <div class="p-5 flex items-center justify-between hover:bg-white transition-colors cursor-pointer border-b border-neutral-200/50 last:border-0 group">
+                    <div class="p-6 bg-white/5 rounded-2xl border border-white/5 flex items-center justify-between hover:bg-white/10 hover:translate-x-2 transition-all cursor-pointer group">
                         <div>
-                            <span class="inline-block px-2 py-0.5 bg-white rounded-full text-[10px] font-bold text-neutral-500 border border-neutral-200 mb-2">{topic.tag}</span>
-                            <h4 class="text-base font-medium text-neutral-700 group-hover:text-primary transition-colors">{topic.title}</h4>
+                            <span class="inline-block px-2 py-1 bg-red-500/10 text-red-400 text-[10px] font-black uppercase rounded-md mb-2">{topic.tag}</span>
+                            <h4 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">{topic.title}</h4>
                         </div>
-                        <div class="flex items-center gap-1 text-neutral-400 text-xs">
-                            <MessageCircle className="w-3.5 h-3.5" />
-                            <span>{topic.replies}</span>
+                        <div class="flex flex-col items-end gap-1 text-slate-500 text-xs font-bold">
+                            <MessageCircle className="w-5 h-5 mb-1 group-hover:text-white transition-colors" />
+                            <span>{topic.replies} Yanıt</span>
                         </div>
                     </div>
                 ))}
             </div>
-             <button class="mt-6 text-accent hover:text-accent font-medium text-sm flex items-center gap-2 transition-colors">
-                Foruma Katıl →
-            </button>
         </div>
     </div>
   </div>

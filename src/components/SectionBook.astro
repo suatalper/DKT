@@ -1,65 +1,55 @@
 ---
-import { Book, Quote } from 'lucide-react';
+import { Book, Quote, ArrowUpRight } from 'lucide-react';
 
 const reviews = [
-  { title: "Devlet", author: "Platon", summary: "İdeal devlet yapısı ve adalet kavramı üzerine temel bir eser.", coverColor: "bg-blue-900" },
-  { title: "1984", author: "George Orwell", summary: "Totaliter rejimlerin distopik bir eleştirisi.", coverColor: "bg-red-900" },
-  { title: "Böyle Buyurdu Zerdüşt", author: "F. Nietzsche", summary: "Üstinsan kavramı ve modern ahlakın eleştirisi.", coverColor: "bg-yellow-900" },
-];
-
-const quotes = [
-  { text: "Bilgi, güçtür.", author: "Francis Bacon" },
-  { text: "Düşünüyorum, öyleyse varım.", author: "Descartes" },
-  { text: "Sorgulanmamış hayat yaşamaya değmez.", author: "Sokrates" },
-  { text: "Kendini bil.", author: "Thales" },
+  { title: "Devlet", author: "Platon", tag: "Politika", gradient: "from-blue-600 to-blue-900" },
+  { title: "1984", author: "George Orwell", tag: "Distopya", gradient: "from-red-600 to-red-900" },
+  { title: "Sapiens", author: "Yuval Noah Harari", tag: "Tarih", gradient: "from-yellow-600 to-orange-900" },
 ];
 ---
 
-<section id="book-section" class="py-24 bg-white relative overflow-hidden font-sans">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col items-center mb-16 text-center">
-      <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider rounded-full mb-3">Kütüphane</span>
-      <h2 class="text-4xl md:text-5xl font-black text-neutral-900 mb-4 tracking-tight">
-        Ne Okuyoruz?
-      </h2>
-      <p class="text-neutral-500 font-medium text-lg">Topluluğun favori kitapları ve incelemeleri.</p>
+<section id="book-section" class="py-24 bg-slate-900 relative">
+  <div class="container mx-auto px-6 relative z-10">
+    
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+      <div>
+        <span class="text-teal-400 font-bold tracking-widest text-sm uppercase mb-2 block">KÜTÜPHANE</span>
+        <h2 class="text-5xl font-black text-white tracking-tighter">BİLGİ DEPOSU</h2>
+      </div>
+      <button class="px-6 py-3 border border-white/20 rounded-full text-white font-bold hover:bg-white hover:text-slate-900 transition-all uppercase tracking-wider text-sm">
+        Tüm Arşivi Gör
+      </button>
     </div>
 
-    <!-- Review Pool Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-      {reviews.map((book) => (
-        <div class="group relative bg-white rounded-3xl border border-neutral-100 overflow-hidden shadow-pop hover:shadow-pop-hover hover:-translate-y-2 transition-all duration-300">
-          <div class={`h-32 ${book.coverColor} w-full relative`}>
-            <div class="absolute inset-0 bg-black/10"></div>
-            <Book className="absolute bottom-4 left-6 w-8 h-8 text-white/80" />
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-black text-neutral-900 mb-1 tracking-tight">{book.title}</h3>
-            <p class="text-sm font-bold text-primary mb-4 uppercase tracking-wide">{book.author}</p>
+    <!-- Glass Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+       {reviews.map((book) => (
+         <div class="group relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:-translate-y-2 hover:bg-white/10 hover:border-teal-500/30 transition-all duration-500 shadow-2xl">
+            <!-- Gradient Orb -->
+            <div class={`absolute top-0 right-0 w-32 h-32 bg-linear-to-br ${book.gradient} rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity`}></div>
             
-            <p class="text-neutral-600 font-medium leading-relaxed mb-8">{book.summary}</p>
-            
-            <button class="w-full py-3 rounded-xl bg-neutral-50 hover:bg-neutral-100 text-neutral-900 font-bold transition-colors flex items-center justify-center gap-2">
-              İncelemeyi Oku
-            </button>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Quote Masonry -->
-    <div class="mb-12">
-        <h3 class="text-3xl font-black text-neutral-900 text-center mb-10">
-            Haftanın Sözleri
-        </h3>
-        
-        <div class="columns-1 md:columns-2 lg:columns-4 gap-6 space-y-6">
-            {quotes.map((quote) => (
-                <div class="break-inside-avoid bg-neutral-50 p-8 rounded-3xl hover:bg-primary hover:text-white transition-all group cursor-default">
-                    <Quote className="w-8 h-8 text-secondary/20 mb-4 group-hover:text-white/30" />
-                    <p class="text-xl font-bold leading-tight mb-4">"{quote.text}"</p>
-                    <p class="text-right text-sm font-bold opacity-60">— {quote.author}</p>
+            <div class="relative z-10">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-bold text-white uppercase tracking-wider">{book.tag}</span>
+                    <ArrowUpRight class="text-slate-500 group-hover:text-white transition-colors" />
                 </div>
+                
+                <h3 class="text-3xl font-black text-white mb-2 leading-none">{book.title}</h3>
+                <p class="text-slate-400 font-bold text-sm uppercase mb-6">{book.author}</p>
+                
+                <div class="h-1 w-12 bg-white/20 rounded-full group-hover:w-full group-hover:bg-teal-500 transition-all duration-500"></div>
+            </div>
+         </div>
+       ))}
+    </div>
+
+    <!-- Quote Strip -->
+    <div class="mt-20 py-10 border-y border-white/5 bg-white/5 backdrop-blur-sm overflow-hidden">
+        <div class="flex gap-12 animate-scroll whitespace-nowrap">
+            {[1,2,3,4].map(() => (
+                 <span class="text-2xl font-bold text-slate-500 uppercase tracking-widest flex items-center gap-8">
+                    Bilgi Güçtür <span class="text-teal-500">•</span> Sorgula <span class="text-red-500">•</span> Keşfet <span class="text-teal-500">•</span>
+                 </span>
             ))}
         </div>
     </div>

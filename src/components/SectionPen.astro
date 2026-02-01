@@ -1,66 +1,67 @@
 ---
-import { PenTool, Feather, Send } from 'lucide-react';
+import { PenTool, Send, Sparkles } from 'lucide-react';
 ---
 
-<section id="pen-section" class="py-24 bg-neutral-100 border-y border-neutral-200 relative">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col items-center mb-16 text-center">
-      <h2 class="text-3xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">Küçük Odalar</h2>
-      <p class="text-neutral-500 max-w-2xl mx-auto font-sans">Kelimelerin ve sessizliğin gücü.</p>
-    </div>
+<section id="pen-section" class="py-24 bg-slate-900 relative border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-6xl">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content -->
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-1 bg-linear-to-r from-red-500 to-transparent"></div>
+                    <span class="text-red-500 font-bold uppercase tracking-widest text-sm">Scriptorium</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-6 leading-tight">
+                    KELİMELERİN <br/> <span class="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500">GÜCÜ</span>
+                </h2>
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    Düşüncelerini serbest bırak. Haftalık meydan okumalara katıl, topluluğun bir parçası ol ve sınırlarını zorla.
+                </p>
+                <div class="flex gap-4">
+                    <button class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-600/20 flex items-center gap-2">
+                        <PenTool class="w-5 h-5" /> Yazmaya Başla
+                    </button>
+                    <button class="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold rounded-xl transition-all">
+                        Son Yazılar
+                    </button>
+                </div>
+            </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Creative Writing Challenge (Prominent Card) -->
-        <div class="lg:col-span-1">
-             <div class="h-full bg-white p-8 rounded-2xl border border-neutral-200 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
-                 <div class="relative z-10 flex flex-col h-full">
-                     <div class="flex items-center gap-2 mb-6 text-accent">
-                         <Feather className="w-5 h-5" />
-                         <span class="font-bold tracking-wider uppercase text-xs">Haftanın Meydan Okuması</span>
-                     </div>
-                     
-                     <h3 class="text-2xl font-serif font-bold text-neutral-900 mb-4 leading-tight">"Sessizliğin Sesi"</h3>
-                     <p class="text-neutral-600 leading-relaxed mb-8 grow text-sm">
-                         Bu hafta, hiç konuşmadan anlaşan iki karakterin hikayesini yazıyoruz. 
-                         Maksimum 500 kelime.
-                     </p>
-                     
-                     <div class="space-y-4 pt-6 border-t border-neutral-100">
-                         <div class="flex justify-between text-xs font-medium text-neutral-500">
-                             <span>Kalan Süre:</span>
-                             <span class="text-neutral-900 font-mono">2 Gün 4 Saat</span>
-                         </div>
-                         <button class="w-full py-2.5 bg-accent hover:bg-red-800 text-white rounded-lg font-medium transition-all shadow-sm flex items-center justify-center gap-2 text-sm">
-                             <Send className="w-3.5 h-3.5" />
-                             Hikayeni Gönder
-                         </button>
-                     </div>
-                 </div>
-             </div>
-        </div>
-
-        <!-- User Blogs -->
-        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[1, 2, 3, 4].map((i) => (
-                <div class="bg-white p-6 rounded-2xl border border-neutral-200 hover:border-primary/30 transition-all group hover:-translate-y-1 hover:shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-xs font-bold text-neutral-500">K{i}</div>
+            <!-- Glass Challenge Card -->
+            <div class="relative">
+                <!-- Glow Effects -->
+                <div class="absolute inset-0 bg-linear-to-br from-red-600 to-purple-600 rounded-[2.5rem] blur-2xl opacity-20 animate-pulse"></div>
+                
+                <div class="relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-10 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                    <div class="flex justify-between items-start mb-8">
                         <div>
-                            <h5 class="text-sm font-bold text-neutral-900">Kullanıcı {i}</h5>
-                            <span class="text-xs text-neutral-400">2 saat önce</span>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs font-black uppercase rounded-lg tracking-widest">Haftalık Challenge</span>
+                            <h3 class="text-3xl font-black text-white mt-3 italic">"Sessiz Çığlık"</h3>
+                        </div>
+                        <Sparkles class="w-8 h-8 text-yellow-400" />
+                    </div>
+
+                    <p class="text-slate-300 font-medium mb-8 leading-relaxed border-l-4 border-red-500 pl-6">
+                        Hiçbir diyaloğun olmadığı, sadece tasvirlerin konuştuğu bir sahne yaz. Gürültüyü kelimelerinle sustur.
+                    </p>
+
+                    <div class="flex items-center justify-between p-6 bg-slate-900/50 rounded-2xl border border-white/5">
+                        <div class="flex -space-x-3">
+                            {[1,2,3].map(i => (
+                                <div class={`w-10 h-10 rounded-full border-2 border-slate-900 bg-linear-to-br from-slate-700 to-slate-600`}></div>
+                            ))}
+                            <div class="w-10 h-10 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center text-xs font-bold text-white">+42</div>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-xs text-slate-500 uppercase font-bold">Bitiş</p>
+                             <p class="text-white font-mono font-bold">02:14:59</p>
                         </div>
                     </div>
-                    <h4 class="text-lg font-serif font-bold text-neutral-800 mb-2 group-hover:text-primary transition-colors">Modern Çağda Stoacılık</h4>
-                    <p class="text-sm text-neutral-500 line-clamp-2 leading-relaxed mb-4">
-                        Günümüzün kaosunda iç huzuru bulmak için antik öğretilere nasıl dönebiliriz? 
-                        Marcus Aurelius'un günlüklerinden notlar...
-                    </p>
-                    <a href="#" class="inline-flex items-center text-xs font-bold text-primary hover:text-primary-hover transition-colors uppercase tracking-wide">
-                        Devamını Oku <span class="ml-1 transition-transform group-hover:translate-x-1">→</span>
-                    </a>
                 </div>
-            ))}
+            </div>
+
         </div>
     </div>
-  </div>
 </section>

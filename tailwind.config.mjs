@@ -4,37 +4,31 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'Inter'", "sans-serif"], // Keeping Inter for clean social look
-        serif: ["'Merriweather'", "serif"], // Keeping for accents, though Social might prefer sans. Prompt didn't specify, sticking to current base.
+        sans: ["'Inter'", "sans-serif"],
+        serif: ["'Playfair Display'", "serif"], // Classic, philosophical feel
       },
       colors: {
         primary: {
-          DEFAULT: "#0d9488", // Teal 600 - "Use large, bold color blocks"
-          dark: "#0f766e", // Teal 700
-          light: "#2dd4bf", // Teal 400
+          DEFAULT: "#2dd4bf", // Neon Teal - "Glowing accents"
+          hover: "#14b8a6",
         },
-        secondary: {
-          DEFAULT: "#7f1d1d", // Red 900 - "Buttons... solid Red-900"
-          hover: "#991b1b", // Red 800
+        dark: {
+          bg: "#0f172a", // Slate 900 - Global background
+          surface: "#1e293b", // Slate 800 - Component background
+          border: "#334155", // Slate 700 - Borders
         },
-        neutral: {
-          50: "#f8fafc",
-          100: "#f1f5f9",
-          200: "#e2e8f0",
-          800: "#1e293b",
-          900: "#0f172a",
+        burgundy: {
+          DEFAULT: "#450a0a", // Deep Red 950 - "Rich Velvet"
+          hover: "#7f1d1d", // Red 900
+          light: "#991b1b", // Red 800
         },
-      },
-      borderRadius: {
-        xl: "1rem",
-        "2xl": "1.5rem",
-        "3xl": "2rem",
-        pill: "9999px", // For buttons
+        text: {
+          main: "#e2e8f0", // Light Gray - Main text
+          muted: "#94a3b8", // Slate 400 - Muted text
+        },
       },
       boxShadow: {
-        pop: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)", // Standard shadow-lg equivalent
-        "pop-hover":
-          "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)", // XL equivalent
+        glow: "0 0 20px -5px rgba(45, 212, 191, 0.3)", // Neon glow effect
       },
     },
   },

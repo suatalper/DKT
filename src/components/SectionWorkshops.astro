@@ -1,62 +1,65 @@
 ---
-import { MonitorPlay, Users, Clock } from 'lucide-react';
+import { MonitorPlay, Users, Clock, ArrowRight } from 'lucide-react';
 
 const workshops = [
   { 
     title: "Yaratıcı Yazarlık 101", 
     instructor: "Ahmet Ümit", 
-    date: "12 Kasım - 12 Aralık", 
+    date: "12 Kasım", 
     level: "Başlangıç",
-    image: "bg-gradient-to-br from-purple-900 to-indigo-900"
+    bg: "bg-linear-to-br from-purple-600 to-indigo-900"
   },
   { 
-    title: "Felsefe Tarihi Okumaları", 
-    instructor: "Prof. Dr. İoanna Kuçuradi", 
+    title: "Felsefe Tarihi", 
+    instructor: "İoanna Kuçuradi", 
     date: "Her Çarşamba", 
-    level: "Orta Seviye",
-    image: "bg-gradient-to-br from-orange-900 to-red-900"
+    level: "Orta",
+    bg: "bg-linear-to-br from-orange-600 to-red-900"
   },
   { 
-    title: "Eleştirel Düşünme Teknikleri", 
-    instructor: "Dr. Özgür Uçkan", 
+    title: "Eleştirel Düşünme", 
+    instructor: "Özgür Uçkan", 
     date: "5 Kasım", 
-    level: "İleri Seviye",
-    image: "bg-gradient-to-br from-emerald-900 to-teal-900"
+    level: "İleri",
+    bg: "bg-linear-to-br from-teal-600 to-emerald-900"
   }
 ];
 ---
 
-<section id="workshops-section" class="py-24 bg-neutral-50 relative overflow-hidden">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-       <span class="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Eğitim ve Gelişim</span>
-       <h2 class="text-3xl md:text-5xl font-serif font-bold text-neutral-900 mb-6">Atölyeler</h2>
-       <p class="text-neutral-500 max-w-2xl mx-auto font-sans">Alanında uzman isimlerle derinleşin, üretin ve paylaşın.</p>
+<section id="workshops-section" class="py-24 bg-slate-900 relative">
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+       <div>
+         <span class="text-teal-400 font-bold tracking-widest text-sm uppercase mb-2 block">AKADEMİ</span>
+         <h2 class="text-5xl font-black text-white tracking-tighter">ATÖLYELER</h2>
+       </div>
+       <p class="text-slate-400 font-medium max-w-sm text-right hidden md:block">
+         Alanının en iyileriyle derinleşin. Teori ve pratiği birleştirin.
+       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
        {workshops.map(workshop => (
-         <div class="group relative bg-white rounded-xl overflow-hidden border border-neutral-200 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <!-- Image Area -->
-            <div class={`h-48 ${workshop.image} relative overflow-hidden opacity-90 group-hover:opacity-100 transition-opacity`}>
-                <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+         <div class="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden hover:-translate-y-2 transition-transform duration-500">
+            <!-- Visual Header -->
+            <div class={`h-32 ${workshop.bg} relative p-6`}>
+                <div class="absolute inset-0 bg-noise opacity-20 mix-blend-overlay"></div>
+                <Users class="text-white/50 w-8 h-8 absolute top-6 right-6" />
+                <span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-lg text-xs font-black text-white uppercase tracking-wider inline-block">{workshop.level}</span>
             </div>
             
             <div class="p-8">
-               <div class="flex items-center justify-between mb-4">
-                  <span class="px-3 py-1 bg-neutral-100 rounded-full text-xs text-neutral-600 font-medium">{workshop.level}</span>
-                  <div class="flex items-center gap-1 text-neutral-400 text-xs">
-                     <Clock className="w-3 h-3" />
-                     <span>{workshop.date}</span>
-                  </div>
+               <div class="flex items-center gap-2 text-teal-400 text-xs font-bold uppercase tracking-wider mb-4">
+                  <Clock className="w-3 h-3" />
+                  <span>{workshop.date}</span>
                </div>
                
-               <h3 class="text-xl font-serif font-bold text-neutral-900 mb-2 group-hover:text-primary transition-colors">{workshop.title}</h3>
-               <p class="text-sm text-neutral-500 mb-6">Eğitmen: <span class="text-neutral-900 font-medium">{workshop.instructor}</span></p>
+               <h3 class="text-2xl font-bold text-white mb-2 leading-tight">{workshop.title}</h3>
+               <p class="text-sm text-slate-400 mb-8 font-medium">Eğitmen: <span class="text-white">{workshop.instructor}</span></p>
                
-               <button class="w-full py-3 border border-neutral-200 rounded-lg text-neutral-700 font-medium hover:bg-neutral-50 hover:text-primary hover:border-primary/30 transition-all flex items-center justify-center gap-2">
+               <button class="w-full py-4 bg-slate-800 hover:bg-white hover:text-slate-900 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-teal-500/20">
                   <MonitorPlay className="w-4 h-4" />
-                  Detayları İncele
+                  Kayıt Ol
                </button>
             </div>
          </div>

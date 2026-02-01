@@ -1,40 +1,60 @@
 ---
-import { Anchor } from 'lucide-react';
+import { Anchor, Users, BookOpen, Mic, Lightbulb } from 'lucide-react';
 ---
 
-<section id="about-section" class="py-24 bg-white relative overflow-hidden flex items-center justify-center text-center">
-  <div class="container mx-auto px-6 relative z-10 max-w-4xl">
-      <div class="mb-8 flex justify-center text-primary">
-         <Anchor className="w-12 h-12" />
+<section id="about-section" class="py-24 relative overflow-hidden bg-slate-900">
+  <div class="container mx-auto px-6 max-w-6xl relative z-10">
+      
+      <div class="mb-16">
+        <h2 class="text-6xl font-black text-white mb-4 tracking-tighter">BİZ KİMİZ?</h2>
+        <p class="text-slate-400 text-xl max-w-2xl font-medium">Burası sadece bir topluluk değil, <span class="text-teal-400 font-bold">zihinsel bir devrim.</span></p>
       </div>
-      
-      <h2 class="text-3xl md:text-5xl font-serif font-bold text-neutral-900 mb-8 leading-tight">
-        Biz Kimiz?
-      </h2>
-      
-      <p class="text-xl md:text-2xl text-neutral-600 font-sans leading-relaxed mb-16 relative">
-        <span class="block text-6xl text-primary/20 font-serif mb-4">"</span>
-        Düşünce ve Kitap Topluluğu, entelektüel üretimin tüketimden daha değerli olduğuna inananların limanıdır. 
-        Amacımız, fikirlerin çarpıştığı ama asla incitmediği, derinliğin sığlığa galip geldiği bir alan yaratmaktır.
-      </p>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 pt-12 border-t border-neutral-100">
-          <div class="p-4">
-             <span class="block text-4xl font-serif font-bold text-primary mb-2">5K+</span>
-             <span class="text-sm font-medium text-neutral-500 uppercase tracking-widest">Aktif Üye</span>
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+          
+          <!-- Large Card: Manifesto -->
+          <div class="md:col-span-2 md:row-span-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 flex flex-col justify-between group hover:bg-white/10 transition-colors">
+             <div>
+                 <div class="w-12 h-12 bg-linear-to-br from-teal-500 to-teal-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-teal-500/20 group-hover:scale-110 transition-transform duration-500">
+                    <Anchor class="text-white w-6 h-6" />
+                 </div>
+                 <h3 class="text-3xl font-bold text-white mb-4">Manifesto</h3>
+                 <p class="text-slate-300 leading-relaxed text-lg">
+                    "Düşünce ve Kitap Topluluğu, entelektüel üretimin tüketimden daha değerli olduğuna inananların limanıdır. Fikirlerin çarpıştığı ama asla incitmediği, derinliğin sığlığa galip geldiği bir alan yaratıyoruz."
+                 </p>
+             </div>
+             <div class="mt-8">
+                <span class="text-sm font-bold text-teal-400 uppercase tracking-widest">DKT Felsefesi &rarr;</span>
+             </div>
           </div>
-          <div class="p-4">
-             <span class="block text-4xl font-serif font-bold text-primary mb-2">120+</span>
-             <span class="text-sm font-medium text-neutral-500 uppercase tracking-widest">Atölye</span>
+
+          <!-- Stat Card 1 -->
+          <div class="md:col-span-1 md:row-span-1 bg-linear-to-br from-slate-800 to-slate-900 border border-white/5 rounded-3xl p-6 flex flex-col justify-center items-center hover:border-teal-500/30 transition-colors">
+              <Users class="text-teal-500 w-8 h-8 mb-3 opacity-80" />
+              <span class="text-4xl font-black text-white mb-1">5K+</span>
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Üye</span>
           </div>
-           <div class="p-4">
-             <span class="block text-4xl font-serif font-bold text-primary mb-2">850+</span>
-             <span class="text-sm font-medium text-neutral-500 uppercase tracking-widest">Analiz</span>
+
+          <!-- Stat Card 2 -->
+          <div class="md:col-span-1 md:row-span-1 bg-linear-to-br from-slate-800 to-slate-900 border border-white/5 rounded-3xl p-6 flex flex-col justify-center items-center hover:border-red-500/30 transition-colors">
+              <BookOpen class="text-red-500 w-8 h-8 mb-3 opacity-80" />
+              <span class="text-4xl font-black text-white mb-1">120+</span>
+              <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Atölye</span>
           </div>
-           <div class="p-4">
-             <span class="block text-4xl font-serif font-bold text-primary mb-2">∞</span>
-             <span class="text-sm font-medium text-neutral-500 uppercase tracking-widest">Fikir</span>
+
+          <!-- Wide Card: Vision -->
+          <div class="md:col-span-2 md:row-span-1 bg-linear-to-r from-red-900/40 to-slate-900 border border-white/10 rounded-3xl p-8 flex items-center justify-between relative overflow-hidden group">
+              <div class="absolute inset-0 bg-noise opacity-10"></div>
+              <div class="relative z-10 max-w-md">
+                  <h4 class="text-2xl font-bold text-white mb-2">Sınırsız Analiz</h4>
+                  <p class="text-slate-400 text-sm">850'den fazla derinlemesine kitap ve fikir analizi ile kütüphanemiz her gün büyüyor.</p>
+              </div>
+              <div class="relative z-10 bg-white/10 p-4 rounded-full">
+                  <Lightbulb class="text-yellow-400 w-8 h-8" />
+              </div>
           </div>
+
       </div>
   </div>
 </section>
