@@ -2,40 +2,36 @@
 import { PenTool, Feather, Send } from 'lucide-react';
 ---
 
-<section id="pen-section" class="py-24 bg-dark-bg/50 border-y border-white/5">
+<section id="pen-section" class="py-24 bg-neutral-100 border-y border-neutral-200 relative">
   <div class="container mx-auto px-6">
-    <div class="flex items-center gap-4 mb-16">
-      <div class="p-3 bg-secondary/20 rounded-xl">
-        <PenTool className="w-8 h-8 text-secondary" />
-      </div>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">Yazın & Üretim</h2>
+    <div class="flex flex-col items-center mb-16 text-center">
+      <h2 class="text-3xl md:text-5xl font-serif font-bold text-neutral-900 mb-4">Küçük Odalar</h2>
+      <p class="text-neutral-500 max-w-2xl mx-auto font-sans">Kelimelerin ve sessizliğin gücü.</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <!-- Creative Writing Challenge (Prominent Card) -->
         <div class="lg:col-span-1">
-             <div class="h-full bg-linear-to-br from-secondary/20 to-dark-surface p-8 rounded-2xl border border-secondary/30 relative overflow-hidden group">
-                 <div class="absolute -right-10 -top-10 w-40 h-40 bg-secondary/20 rounded-full blur-[60px] group-hover:bg-secondary/40 transition-all"></div>
-                 
+             <div class="h-full bg-white p-8 rounded-2xl border border-neutral-200 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
                  <div class="relative z-10 flex flex-col h-full">
-                     <div class="flex items-center gap-2 mb-6">
-                         <Feather className="w-6 h-6 text-secondary" />
-                         <span class="text-secondary font-bold tracking-wider uppercase text-sm">Haftanın Meydan Okuması</span>
+                     <div class="flex items-center gap-2 mb-6 text-accent">
+                         <Feather className="w-5 h-5" />
+                         <span class="font-bold tracking-wider uppercase text-xs">Haftanın Meydan Okuması</span>
                      </div>
                      
-                     <h3 class="text-2xl font-bold text-white mb-4">"Sessizliğin Sesi"</h3>
-                     <p class="text-gray-300 leading-relaxed mb-8 grow">
+                     <h3 class="text-2xl font-serif font-bold text-neutral-900 mb-4 leading-tight">"Sessizliğin Sesi"</h3>
+                     <p class="text-neutral-600 leading-relaxed mb-8 grow text-sm">
                          Bu hafta, hiç konuşmadan anlaşan iki karakterin hikayesini yazıyoruz. 
                          Maksimum 500 kelime.
                      </p>
                      
-                     <div class="space-y-4">
-                         <div class="flex justify-between text-sm text-text-muted">
+                     <div class="space-y-4 pt-6 border-t border-neutral-100">
+                         <div class="flex justify-between text-xs font-medium text-neutral-500">
                              <span>Kalan Süre:</span>
-                             <span class="text-white font-mono">2 Gün 4 Saat</span>
+                             <span class="text-neutral-900 font-mono">2 Gün 4 Saat</span>
                          </div>
-                         <button class="w-full py-3 bg-secondary hover:bg-secondary-hover text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-secondary/40 flex items-center justify-center gap-2">
-                             <Send className="w-4 h-4" />
+                         <button class="w-full py-2.5 bg-accent hover:bg-red-800 text-white rounded-lg font-medium transition-all shadow-sm flex items-center justify-center gap-2 text-sm">
+                             <Send className="w-3.5 h-3.5" />
                              Hikayeni Gönder
                          </button>
                      </div>
@@ -46,20 +42,22 @@ import { PenTool, Feather, Send } from 'lucide-react';
         <!-- User Blogs -->
         <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2, 3, 4].map((i) => (
-                <div class="bg-dark-surface p-6 rounded-2xl border border-white/5 hover:border-white/20 transition-all group hover:-translate-y-1">
+                <div class="bg-white p-6 rounded-2xl border border-neutral-200 hover:border-primary/30 transition-all group hover:-translate-y-1 hover:shadow-sm">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded-full bg-linear-to-br from-gray-700 to-gray-900"></div>
+                        <div class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-xs font-bold text-neutral-500">K{i}</div>
                         <div>
-                            <h5 class="text-sm font-bold text-white">Kullanıcı {i}</h5>
-                            <span class="text-xs text-text-muted">2 saat önce</span>
+                            <h5 class="text-sm font-bold text-neutral-900">Kullanıcı {i}</h5>
+                            <span class="text-xs text-neutral-400">2 saat önce</span>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold text-gray-200 mb-2 group-hover:text-primary transition-colors">Modern Çağda Stoacılık</h4>
-                    <p class="text-sm text-text-muted line-clamp-3">
+                    <h4 class="text-lg font-serif font-bold text-neutral-800 mb-2 group-hover:text-primary transition-colors">Modern Çağda Stoacılık</h4>
+                    <p class="text-sm text-neutral-500 line-clamp-2 leading-relaxed mb-4">
                         Günümüzün kaosunda iç huzuru bulmak için antik öğretilere nasıl dönebiliriz? 
                         Marcus Aurelius'un günlüklerinden notlar...
                     </p>
-                    <a href="#" class="inline-block mt-4 text-sm text-primary hover:text-white transition-colors">Devamını Oku</a>
+                    <a href="#" class="inline-flex items-center text-xs font-bold text-primary hover:text-primary-hover transition-colors uppercase tracking-wide">
+                        Devamını Oku <span class="ml-1 transition-transform group-hover:translate-x-1">→</span>
+                    </a>
                 </div>
             ))}
         </div>

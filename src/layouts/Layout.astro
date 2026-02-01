@@ -11,17 +11,16 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>Düşünce ve Kitap Topluluğu</title>
         
-        <!-- Google Fonts: Poppins (Sans) -->
+        <!-- Google Fonts: Inter (Sans) & Merriweather (Serif) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <!-- Note: Clash Display is usually a paid font or local, using Poppins as main display for now or fallback -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
         
         <script is:inline>
             // Optional: Add any inline scripts here if needed
         </script>
 	</head>
-	<body class="bg-neutral-50 text-black font-sans min-h-screen flex flex-col antialiased selection:bg-accent selection:text-black">
+	<body class="bg-neutral-50 text-neutral-900 font-sans min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white">
 		<slot />
 	</body>
 </html>

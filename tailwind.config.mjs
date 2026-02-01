@@ -3,51 +3,30 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      colors: {
-        primary: {
-          DEFAULT: "#00E5FF", // Vivid Turquoise
-          hover: "#00B8D4",
-        },
-        secondary: {
-          DEFAULT: "#FF0040", // Vivid Maroon/Red
-          hover: "#D50032",
-        },
-        accent: {
-          DEFAULT: "#FACC15", // Bright Yellow
-          purple: "#A855F7", // Vivid Purple
-        },
-        neutral: {
-          50: "#FEFCE8", // Pale Yellow / Off-white
-          100: "#F3F4F6", // Light Gray
-          900: "#111827", // Almost Black
-        },
-        "dark-bg": "#FEFCE8", // Replaced with Pale Yellow for compat
-        "dark-surface": "#FFFFFF", // Replaced with White for compat
-        "text-main": "#000000", // Black
-        "text-muted": "#374151", // Dark Gray
-      },
       fontFamily: {
-        sans: ["'Poppins'", "sans-serif"],
-        display: ["'Clash Display'", "sans-serif"],
+        sans: ["'Inter'", "sans-serif"],
+        serif: ["'Merriweather'", "serif"],
       },
-      boxShadow: {
-        brutal: "4px 4px 0px 0px rgba(0,0,0,1)",
-        "brutal-lg": "8px 8px 0px 0px rgba(0,0,0,1)",
-        "brutal-sm": "2px 2px 0px 0px rgba(0,0,0,1)",
-      },
-      backgroundImage: {
-        "grid-pattern":
-          "url('https://www.transparenttextures.com/patterns/graphy.png')",
-      },
-      keyframes: {
-        shake: {
-          "0%, 100%": { transform: "rotate(-1deg)" },
-          "50%": { transform: "rotate(1deg)" },
+      colors: {
+        // "Use the Teal-700 color mainly for text headings and icons"
+        primary: {
+          DEFAULT: "#0f766e", // Teal 700
+          hover: "#0d6a62", // Slightly darker teal
+        },
+        // "Use Red-900 only for small accents and button borders"
+        accent: {
+          DEFAULT: "#7f1d1d", // Red 900
+        },
+        // Neutral palette for minimalist look
+        neutral: {
+          50: "#f8fafc", // Slate 50
+          100: "#f1f5f9", // Slate 100
+          200: "#e2e8f0", // Slate 200
+          800: "#1e293b", // Slate 800
+          900: "#0f172a", // Slate 900
         },
       },
-      animation: {
-        shake: "shake 0.5s ease-in-out infinite",
-      },
+      // Removed brutal box-shadows and patterns
     },
   },
   plugins: [],
