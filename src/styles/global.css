@@ -7,6 +7,6 @@
   }
 
   body {
-    @apply bg-neutral-50 text-neutral-900 font-sans antialiased;
+    @apply bg-cream text-black font-sans antialiased;
   }
 }

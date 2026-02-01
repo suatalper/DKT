@@ -2,49 +2,60 @@
 import { ArrowRight } from 'lucide-react';
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 px-6 bg-linear-to-br from-teal-900 via-slate-900 to-red-900">
-  <!-- Mesh Gradients for Depth -->
-  <div class="absolute inset-0 bg-[url('/noise.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
-  <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/20 rounded-full blur-[120px] mix-blend-screen opacity-50 animate-pulse duration-3000 pointer-events-none"></div>
-  <div class="absolute bottom-0 left-0 w-[800px] h-[800px] bg-teal-600/20 rounded-full blur-[120px] mix-blend-screen opacity-50 animate-pulse duration-5000 pointer-events-none"></div>
+<section class="min-h-screen pt-32 pb-20 px-6 bg-cream border-b-4 border-black relative overflow-hidden flex flex-col justify-center">
+  
+  <!-- Marquee Background -->
+  <div class="absolute inset-x-0 top-20 -rotate-3 border-y-4 border-black bg-neo-yellow z-0 py-2 opacity-80 pointer-events-none">
+    <div class="animate-marquee whitespace-nowrap text-4xl font-black text-black">
+      SINIRSIZ FİKİR • CESUR DÜŞÜNCE • YENİ BİR DÜNYA • SINIRSIZ FİKİR • CESUR DÜŞÜNCE • YENİ BİR DÜNYA •
+    </div>
+  </div>
 
-  <div class="container mx-auto relative z-10 text-center max-w-5xl">
-    
-    <!-- Headline -->
-    <div class="mb-16">
-      <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-white mb-8 leading-[0.9] drop-shadow-2xl">
-        FİKİRLERİN <br/>
-        <span class="text-transparent bg-clip-text bg-linear-to-r from-teal-400 to-teal-200">SINIRSIZ</span>
-        DÜNYASI
-      </h1>
+  <div class="container mx-auto relative z-10 max-w-6xl">
+    <div class="flex flex-col md:flex-row items-center gap-12">
       
-      <p class="text-xl md:text-2xl text-slate-300 font-medium max-w-2xl mx-auto leading-relaxed">
-        Bilginin ışığında, <span class="text-teal-400 font-bold">akıl</span> ve <span class="text-red-500 font-bold">tutku</span> birleşiyor.
-      </p>
-    </div>
-
-    <!-- CTA Buttons -->
-    <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-      <a href="#join" class="group relative px-10 py-5 bg-white text-slate-900 font-black text-lg uppercase tracking-widest hover:bg-teal-50 transition-all shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_-10px_rgba(45,212,191,0.5)] overflow-hidden rounded-full">
-        <span class="relative z-10 flex items-center gap-2">Hemen Başla <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></span>
-      </a>
-
-      <a href="#workshops-section" class="px-10 py-5 text-white font-bold uppercase tracking-widest border border-white/20 hover:bg-white/10 hover:border-white/50 transition-all rounded-full backdrop-blur-md">
-        Keşfet
-      </a>
-    </div>
-    
-    <!-- Bold Stats or Sticker -->
-    <div class="mt-24 pt-8 flex justify-center items-center gap-12 opacity-60">
-        <div class="text-center">
-            <span class="block text-3xl font-black text-white">5K+</span>
-            <span class="text-xs font-bold text-teal-400 uppercase tracking-widest">Üye</span>
+      <!-- Headline Block -->
+      <div class="flex-1 text-left relative">
+        <div class="absolute -top-12 -left-12 w-32 h-32 bg-neo-teal rounded-full border-4 border-black z-0"></div>
+        
+        <h1 class="text-7xl md:text-9xl font-black text-black leading-[0.8] tracking-tighter relative z-10 mb-8 drop-shadow-neo-lg">
+          FİKİR<br/>
+          <span class="text-neo-red italic">DEPOSU</span>
+        </h1>
+        
+        <div class="bg-white border-2 border-black p-6 shadow-neo max-w-lg transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+          <p class="text-xl md:text-2xl text-black font-bold font-mono">
+            "Bilgi güçtür." <br/>
+            Ama <span class="bg-neo-yellow px-2 border border-black">eylem</span> daha güçlüdür.
+          </p>
         </div>
-        <div class="h-12 w-px bg-white/20"></div>
-        <div class="text-center">
-            <span class="block text-3xl font-black text-white">120+</span>
-            <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Etkinlik</span>
+
+        <div class="flex gap-4 mt-10">
+           <a href="#join" class="px-8 py-4 bg-black text-white text-xl font-bold uppercase border-2 border-neo-teal shadow-[8px_8px_0px_0px_#14b8a6] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0px_0px_#14b8a6] transition-all flex items-center gap-2">
+             Hemen Başla <ArrowRight className="w-6 h-6" />
+           </a>
+           <a href="#workshops-section" class="px-8 py-4 bg-white text-black text-xl font-bold uppercase border-2 border-black shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
+             Keşfet
+           </a>
         </div>
+      </div>
+
+      <!-- Collage Image/Stats -->
+      <div class="flex-1 relative hidden md:block">
+         <div class="relative z-10 bg-neo-teal border-4 border-black p-8 shadow-neo-lg transform rotate-3 hover:scale-105 transition-transform duration-300">
+             <div class="aspect-square bg-cream border-2 border-black flex items-center justify-center p-8 text-center relative overflow-hidden">
+                 <div class="absolute inset-0 bg-[radial-gradient(circle,black_1px,transparent_1px)] bg-size-[20px_20px] opacity-10"></div>
+                 <div>
+                    <span class="block text-8xl font-black text-black mb-2">5K</span>
+                    <span class="bg-black text-white px-4 py-1 text-lg font-bold uppercase">Aktif Üye</span>
+                 </div>
+             </div>
+         </div>
+         <div class="absolute -bottom-12 -right-12 bg-neo-red border-4 border-black px-6 py-4 shadow-neo transform -rotate-6 z-20">
+             <span class="text-white font-black text-2xl">#YENİ</span>
+         </div>
+      </div>
+
     </div>
   </div>
 </section>

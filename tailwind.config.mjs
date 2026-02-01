@@ -4,31 +4,23 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'Inter'", "sans-serif"],
-        serif: ["'Playfair Display'", "serif"], // Classic, philosophical feel
+        sans: ["'Space Grotesk'", "sans-serif"], // Quirky, modern sans
+        mono: ["'Courier New'", "monospace"], // Raw feel
       },
       colors: {
-        primary: {
-          DEFAULT: "#2dd4bf", // Neon Teal - "Glowing accents"
-          hover: "#14b8a6",
-        },
-        dark: {
-          bg: "#0f172a", // Slate 900 - Global background
-          surface: "#1e293b", // Slate 800 - Component background
-          border: "#334155", // Slate 700 - Borders
-        },
-        burgundy: {
-          DEFAULT: "#450a0a", // Deep Red 950 - "Rich Velvet"
-          hover: "#7f1d1d", // Red 900
-          light: "#991b1b", // Red 800
-        },
-        text: {
-          main: "#e2e8f0", // Light Gray - Main text
-          muted: "#94a3b8", // Slate 400 - Muted text
-        },
+        cream: "#fcfbf7", // Soft background
+        "neo-teal": "#14b8a6", // Teal-500
+        "neo-red": "#dc2626", // Red-600
+        "neo-yellow": "#facc15", // Warning/Highlight
+        black: "#000000", // Pure black for borders
       },
       boxShadow: {
-        glow: "0 0 20px -5px rgba(45, 212, 191, 0.3)", // Neon glow effect
+        neo: "4px 4px 0px 0px rgba(0,0,0,1)", // Hard shadow
+        "neo-lg": "8px 8px 0px 0px rgba(0,0,0,1)", // Deep hard shadow
+        "neo-sm": "2px 2px 0px 0px rgba(0,0,0,1)", // Subtle hard shadow
+      },
+      borderWidth: {
+        3: "3px",
       },
     },
   },
