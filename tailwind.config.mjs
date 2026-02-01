@@ -4,29 +4,38 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'Inter'", "sans-serif"],
-        serif: ["'Merriweather'", "serif"],
+        sans: ["'Inter'", "sans-serif"], // Keeping Inter for clean social look
+        serif: ["'Merriweather'", "serif"], // Keeping for accents, though Social might prefer sans. Prompt didn't specify, sticking to current base.
       },
       colors: {
-        // "Use the Teal-700 color mainly for text headings and icons"
         primary: {
-          DEFAULT: "#0f766e", // Teal 700
-          hover: "#0d6a62", // Slightly darker teal
+          DEFAULT: "#0d9488", // Teal 600 - "Use large, bold color blocks"
+          dark: "#0f766e", // Teal 700
+          light: "#2dd4bf", // Teal 400
         },
-        // "Use Red-900 only for small accents and button borders"
-        accent: {
-          DEFAULT: "#7f1d1d", // Red 900
+        secondary: {
+          DEFAULT: "#7f1d1d", // Red 900 - "Buttons... solid Red-900"
+          hover: "#991b1b", // Red 800
         },
-        // Neutral palette for minimalist look
         neutral: {
-          50: "#f8fafc", // Slate 50
-          100: "#f1f5f9", // Slate 100
-          200: "#e2e8f0", // Slate 200
-          800: "#1e293b", // Slate 800
-          900: "#0f172a", // Slate 900
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          800: "#1e293b",
+          900: "#0f172a",
         },
       },
-      // Removed brutal box-shadows and patterns
+      borderRadius: {
+        xl: "1rem",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
+        pill: "9999px", // For buttons
+      },
+      boxShadow: {
+        pop: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)", // Standard shadow-lg equivalent
+        "pop-hover":
+          "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)", // XL equivalent
+      },
     },
   },
   plugins: [],
