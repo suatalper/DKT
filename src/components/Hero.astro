@@ -2,55 +2,50 @@
 import { ArrowRight, BookOpen, Brain, PenTool } from 'lucide-react';
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-  <!-- Deep Space Background -->
-  <div class="absolute inset-0 z-0 bg-dark-bg">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] animate-pulse-slow"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] animate-pulse-slow delay-1000"></div>
-  </div>
-
-  <!-- Floating Icons (Antigravity Effect) -->
-  <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
-    <div class="absolute top-1/3 left-[10%] animate-float" style="animation-duration: 8s;">
-      <BookOpen className="w-24 h-24 text-primary transform -rotate-12" />
-    </div>
-    <div class="absolute top-1/4 right-[15%] animate-float" style="animation-duration: 10s; animation-delay: 1s;">
-      <Brain className="w-32 h-32 text-white transform rotate-6" />
-    </div>
-    <div class="absolute bottom-1/3 left-[20%] animate-float" style="animation-duration: 12s; animation-delay: 2s;">
-      <PenTool className="w-20 h-20 text-secondary transform -rotate-45" />
-    </div>
-  </div>
-
-  <div class="container mx-auto px-6 relative z-10 text-center">
+<section class="min-h-screen pt-24 pb-12 flex flex-col border-b border-gray-200">
+  <div class="container mx-auto px-6 grow grid grid-cols-1 md:grid-cols-12 gap-0 border-x border-gray-200 h-full">
     
-    <!-- Headline -->
-    <div class="mb-8">
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
-        <span class="bg-clip-text text-transparent bg-linear-to-r from-primary via-white to-secondary">
-          Fikirlerin Ağırlığı Yoktur,
-        </span>
-        <br />
-        <span class="text-white">Havada Süzülürler.</span>
-      </h1>
+    <!-- Left Column: Image (Asymmetrical 4/12 -> 1/3) -->
+    <div class="col-span-1 md:col-span-4 relative min-h-[50vh] md:min-h-auto border-r border-gray-200 overflow-hidden group">
+      <!-- Image with Teal Multiply Effect -->
+      <div class="absolute inset-0 bg-primary mix-blend-multiply z-10 transition-opacity duration-500 group-hover:opacity-90"></div>
+      <img 
+        src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+        alt="Abstract Library" 
+        class="absolute inset-0 w-full h-full object-cover grayscale contrast-125"
+      />
       
-      <p class="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto font-light leading-relaxed">
-        Okuyan, düşünen ve üretenlerin buluşma noktası.
-      </p>
+      <!-- Decorative Grid Lines overlay -->
+      <div class="absolute inset-0 z-20 bg-[linear-gradient(to_right,transparent_99%,rgba(255,255,255,0.2)_100%)] bg-size-[2rem_100%] pointer-events-none"></div>
     </div>
 
-    <!-- CTA Buttons -->
-    <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-      <a href="#join" class="group relative px-8 py-4 bg-primary text-white rounded-xl font-semibold text-lg overflow-hidden shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:shadow-primary/40">
-        <div class="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
-        <span class="flex items-center gap-2">
-          Topluluğa Katıl <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </span>
-      </a>
+    <!-- Right Column: Content (Asymmetrical 8/12 -> 2/3) -->
+    <div class="col-span-1 md:col-span-8 flex flex-col justify-center p-12 md:p-24 bg-swiss-bg relative z-20">
+      
+      <!-- Headline -->
+      <div class="mb-16">
+        <h1 class="text-7xl md:text-9xl font-black tracking-tighter leading-none text-swiss-text mb-8">
+          FİKİR<br/>
+          <span class="text-primary">AĞIRLIĞI.</span>
+        </h1>
+        
+        <p class="text-2xl md:text-3xl font-bold tracking-tight text-swiss-text/80 max-w-2xl leading-snug border-l-4 border-secondary pl-6">
+          Düşünce ve Kitap Topluluğu. <br/>
+          Okuyan, üreten ve tartışan zihinler için.
+        </p>
+      </div>
 
-      <a href="#workshops-section" class="px-8 py-4 bg-transparent border-2 border-secondary text-white rounded-xl font-semibold text-lg hover:bg-secondary/10 hover:border-secondary transition-all flex items-center gap-2">
-        Atölyeleri İncele
-      </a>
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-6">
+        <a href="#join" class="px-10 py-5 bg-secondary hover:bg-red-900 text-white text-lg font-bold uppercase tracking-tight rounded-none transition-all hover:translate-x-1 flex items-center gap-3">
+          Topluluğa Katıl <ArrowRight className="w-6 h-6" />
+        </a>
+
+        <a href="#workshops-section" class="px-10 py-5 bg-transparent border-2 border-swiss-text text-swiss-text text-lg font-bold uppercase tracking-tight rounded-none hover:bg-swiss-text hover:text-white transition-all">
+          Atölyeleri Gör
+        </a>
+      </div>
     </div>
+
   </div>
 </section>

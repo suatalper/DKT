@@ -2,32 +2,36 @@
 import { Github, Twitter, Instagram } from 'lucide-react';
 ---
 
-<footer class="bg-dark-surface border-t-2 border-secondary/50 pt-16 pb-8 mt-auto">
+<footer class="bg-white border-t-8 border-primary pt-16 pb-12">
   <div class="container mx-auto px-6">
-    <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+    <div class="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
       <!-- Logo & Desc -->
-      <div class="mb-8 md:mb-0 text-center md:text-left">
-        <h2 class="text-2xl font-bold text-white mb-2">DKT<span class="text-primary">.</span></h2>
-        <p class="text-text-muted text-sm">Fikirlerin ve kitapların buluşma noktası.</p>
+      <div class="max-w-md">
+        <h2 class="text-4xl font-black text-swiss-text mb-6 tracking-tighter">DKT<span class="text-secondary">.</span></h2>
+        <p class="text-xl font-medium text-swiss-text/80 leading-snug">
+          Fikirlerin ve kitapların buluşma noktası. <br>
+          Entelektüel üretim için bir alan.
+        </p>
       </div>
 
       <!-- Social Links -->
       <div class="flex items-center gap-6">
-        <a href="#" class="text-text-muted hover:text-primary transition-colors transform hover:scale-110">
-          <Twitter className="w-5 h-5" />
+        <a href="#" class="text-swiss-text hover:text-primary transition-colors transform hover:-translate-y-1">
+          <Twitter className="w-8 h-8" strokeWidth={1.5} />
         </a>
-        <a href="#" class="text-text-muted hover:text-primary transition-colors transform hover:scale-110">
-          <Github className="w-5 h-5" />
+        <a href="#" class="text-swiss-text hover:text-primary transition-colors transform hover:-translate-y-1">
+          <Github className="w-8 h-8" strokeWidth={1.5} />
         </a>
-        <a href="#" class="text-text-muted hover:text-primary transition-colors transform hover:scale-110">
-          <Instagram className="w-5 h-5" />
+        <a href="#" class="text-swiss-text hover:text-primary transition-colors transform hover:-translate-y-1">
+          <Instagram className="w-8 h-8" strokeWidth={1.5} />
         </a>
       </div>
     </div>
 
     <!-- Copyright -->
-    <div class="border-t border-white/5 pt-8 text-center text-sm text-text-muted">
-      <p>&copy; {new Date().getFullYear()} Düşünce ve Kitap Topluluğu. Tüm hakları saklıdır.</p>
+    <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm font-bold uppercase tracking-wide text-swiss-muted">
+      <p>&copy; {new Date().getFullYear()} Düşünce ve Kitap Topluluğu.</p>
+      <p class="mt-4 md:mt-0">İstanbul, TR</p>
     </div>
   </div>
 </footer>

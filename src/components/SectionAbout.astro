@@ -2,43 +2,42 @@
 import { Anchor } from 'lucide-react';
 ---
 
-<section id="about-section" class="py-24 bg-dark-bg relative overflow-hidden flex items-center justify-center text-center">
-  <!-- Background Decor -->
-  <div class="absolute inset-0 z-0">
-     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[128px]"></div>
-  </div>
-
-  <div class="container mx-auto px-6 relative z-10 max-w-4xl">
-      <div class="mb-8 flex justify-center">
-         <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 rotate-45">
-            <Anchor className="w-8 h-8 text-white -rotate-45" />
-         </div>
+<section id="about-section" class="py-0 bg-swiss-bg border-b border-gray-200">
+  <div class="container mx-auto px-6 border-x border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-0">
+    
+    <!-- Left Column: Manifesto -->
+    <div class="p-12 md:p-24 border-b md:border-b-0 md:border-r border-gray-200">
+      <div class="mb-8">
+         <Anchor className="w-12 h-12 text-primary" strokeWidth={1.5} />
       </div>
       
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Biz Kimiz?</h2>
+      <h2 class="text-4xl md:text-6xl font-black text-swiss-text mb-8 tracking-tighter">BİZ KİMİZ?</h2>
       
-      <p class="text-lg md:text-2xl text-gray-300 leading-relaxed font-light mb-12">
+      <p class="text-xl md:text-2xl text-swiss-text/90 leading-relaxed font-medium">
         "Düşünce ve Kitap Topluluğu, entelektüel üretimin tüketimden daha değerli olduğuna inananların limanıdır. 
         Amacımız, fikirlerin çarpıştığı ama asla incitmediği, derinliğin sığlığa galip geldiği bir alan yaratmaktır."
       </p>
+    </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
-          <div>
-             <span class="block text-3xl font-bold text-primary mb-2">5K+</span>
-             <span class="text-sm text-text-muted">Aktif Üye</span>
-          </div>
-          <div>
-             <span class="block text-3xl font-bold text-secondary mb-2">120+</span>
-             <span class="text-sm text-text-muted">Atölye</span>
-          </div>
-           <div>
-             <span class="block text-3xl font-bold text-white mb-2">850+</span>
-             <span class="text-sm text-text-muted">Kitap Analizi</span>
-          </div>
-           <div>
-             <span class="block text-3xl font-bold text-white mb-2">∞</span>
-             <span class="text-sm text-text-muted">Fikir</span>
-          </div>
+    <!-- Right Column: Stats Grid -->
+    <div class="grid grid-cols-2">
+      <div class="p-12 border-b border-r border-gray-200 flex flex-col justify-center">
+         <span class="block text-5xl md:text-6xl font-black text-primary mb-2 tracking-tighter">5K+</span>
+         <span class="text-sm uppercase font-bold text-swiss-muted tracking-wide">Aktif Üye</span>
       </div>
+      <div class="p-12 border-b border-gray-200 flex flex-col justify-center">
+         <span class="block text-5xl md:text-6xl font-black text-secondary mb-2 tracking-tighter">120+</span>
+         <span class="text-sm uppercase font-bold text-swiss-muted tracking-wide">Atölye</span>
+      </div>
+       <div class="p-12 border-r border-gray-200 flex flex-col justify-center">
+         <span class="block text-5xl md:text-6xl font-black text-swiss-text mb-2 tracking-tighter">850+</span>
+         <span class="text-sm uppercase font-bold text-swiss-muted tracking-wide">Kitap Analizi</span>
+      </div>
+       <div class="p-12 flex flex-col justify-center">
+         <span class="block text-5xl md:text-6xl font-black text-swiss-text mb-2 tracking-tighter">∞</span>
+         <span class="text-sm uppercase font-bold text-swiss-muted tracking-wide">Fikir</span>
+      </div>
+    </div>
+
   </div>
 </section>

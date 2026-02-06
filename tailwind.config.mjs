@@ -5,38 +5,26 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0097a7",
-          hover: "#00acc1",
+          DEFAULT: "#0891b2", // Teal-600
+          hover: "#0e7490", // Teal-700
         },
         secondary: {
-          DEFAULT: "#800000",
-          hover: "#a00000",
+          DEFAULT: "#991b1b", // Red-800
+          hover: "#7f1d1d", // Red-900
         },
-        "dark-bg": "#0f172a", // Slate-900
-        "dark-surface": "#1e1e1e",
-        "text-main": "#e0e0e0",
-        "text-muted": "#a0a0a0",
+        "swiss-bg": "#F8FAFC", // Slate-50
+        "swiss-text": "#020617", // Slate-950
+        "swiss-muted": "#64748b", // Slate-500
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
-      keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "pulse-slow": {
-          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
-          "50%": { opacity: "0.8", transform: "scale(1.1)" },
-        },
-        shimmer: {
-          "100%": { transform: "translateX(100%)" },
-        },
+      backgroundImage: {
+        "grid-pattern":
+          "linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)",
       },
-      animation: {
-        float: "float 6s ease-in-out infinite",
-        "pulse-slow": "pulse-slow 8s ease-in-out infinite",
-        shimmer: "shimmer 1.5s infinite",
+      backgroundSize: {
+        "grid-pattern": "4rem 4rem",
       },
     },
   },
