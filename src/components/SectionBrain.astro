@@ -8,45 +8,45 @@ import { Brain, Swords, Milestone } from 'lucide-react';
 
   <div class="container mx-auto px-6 relative z-10">
     <div class="flex items-center gap-4 mb-16">
-      <div class="p-3 bg-primary/20 rounded-xl">
-        <Brain className="w-8 h-8 text-primary" />
+      <div class="p-3 bg-[#0891b2]/10 rounded-xl">
+        <Brain className="w-8 h-8 text-[#0891b2]" />
       </div>
-      <h2 class="text-3xl md:text-4xl font-bold text-white">Derin Düşünce</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1e293b]">Derin Düşünce</h2>
     </div>
 
     <!-- Debate Arena (Split Screen) -->
     <div class="mb-24">
        <div class="flex items-center gap-2 mb-6">
-          <Swords className="w-6 h-6 text-secondary" />
-          <h3 class="text-2xl font-bold text-white">Münazara Arenası</h3>
+          <Swords className="w-6 h-6 text-[#991b1b]" />
+          <h3 class="text-2xl font-bold text-[#1e293b]">Münazara Arenası</h3>
        </div>
        
-       <div class="relative grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-0 rounded-3xl overflow-hidden border border-white/10">
+       <div class="relative grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-0 rounded-3xl overflow-hidden border border-gray-100 shadow-[0_20px_40px_-15px_rgba(8,145,178,0.1)]">
           <!-- Side A -->
-          <div class="bg-linear-to-br from-[#0891b2]/20 to-white/5 backdrop-blur-xl p-10 text-center relative group hover:flex-[1.1] transition-all duration-500">
+          <div class="bg-linear-to-br from-[#ecfeff] to-white p-10 text-center relative group hover:flex-[1.1] transition-all duration-500">
              <h4 class="text-xl font-bold text-[#0891b2] mb-4">Özgür İrade Vardır</h4>
-             <p class="text-gray-300 leading-relaxed">
+             <p class="text-[#1e293b]/80 leading-relaxed">
                İnsan eylemleri, deterministik yasalarla tamamen açıklanamaz. 
                Bilinçli seçim yeteneği ahlaki sorumluluğun temelidir.
              </p>
-             <button class="mt-6 px-6 py-2 border border-[#0891b2]/30 text-[#0891b2] rounded-full hover:bg-[#0891b2]/20 transition-colors">
+             <button class="mt-6 px-6 py-2 border border-[#0891b2]/30 text-[#0891b2] rounded-full hover:bg-[#0891b2]/10 transition-colors">
                 Savunmayı Oku
              </button>
           </div>
 
           <!-- Divider VS -->
-          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-[#020617] rounded-full flex items-center justify-center border border-white/20 font-bold text-white shadow-xl">
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full flex items-center justify-center border border-gray-100 font-bold text-[#1e293b] shadow-xl">
              VS
           </div>
 
           <!-- Side B -->
-          <div class="bg-linear-to-bl from-[#991b1b]/20 to-white/5 backdrop-blur-xl p-10 text-center relative group hover:flex-[1.1] transition-all duration-500">
+          <div class="bg-linear-to-bl from-[#fff1f2] to-white p-10 text-center relative group hover:flex-[1.1] transition-all duration-500">
              <h4 class="text-xl font-bold text-[#991b1b] mb-4">Her Şey Belirlenmiştir</h4>
-             <p class="text-gray-300 leading-relaxed">
+             <p class="text-[#1e293b]/80 leading-relaxed">
                Neden-sonuç zinciri kırılamaz. Kararlarımız nörolojik ve çevresel faktörlerin
                kaçınılmaz sonucudur.
              </p>
-             <button class="mt-6 px-6 py-2 border border-[#991b1b]/30 text-[#991b1b] rounded-full hover:bg-[#991b1b]/20 transition-colors">
+             <button class="mt-6 px-6 py-2 border border-[#991b1b]/30 text-[#991b1b] rounded-full hover:bg-[#991b1b]/10 transition-colors">
                 Savunmayı Oku
              </button>
           </div>
@@ -56,30 +56,30 @@ import { Brain, Swords, Milestone } from 'lucide-react';
     <!-- Learning Roadmaps -->
     <div>
         <div class="flex items-center gap-2 mb-8">
-            <Milestone className="w-6 h-6 text-primary" />
-            <h3 class="text-2xl font-bold text-white">Öğrenme Yolları</h3>
+            <Milestone className="w-6 h-6 text-[#0891b2]" />
+            <h3 class="text-2xl font-bold text-[#1e293b]">Öğrenme Yolları</h3>
         </div>
 
-        <div class="relative border-l-2 border-white/10 ml-4 space-y-12">
+        <div class="relative border-l-2 border-gray-200 ml-4 space-y-12">
             <!-- Node 1 -->
             <div class="relative pl-8 group">
-                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-dark-bg border-2 border-primary rounded-full group-hover:scale-125 group-hover:bg-primary transition-all"></div>
-                <h4 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Felsefe 101</h4>
-                <p class="text-text-muted mb-4">Antik Yunan'dan modern düşünceye giriş.</p>
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-[#0891b2] rounded-full group-hover:scale-125 group-hover:bg-[#0891b2] transition-all"></div>
+                <h4 class="text-lg font-bold text-[#1e293b] mb-2 group-hover:text-[#0891b2] transition-colors">Felsefe 101</h4>
+                <p class="text-[#1e293b]/70 mb-4">Antik Yunan'dan modern düşünceye giriş.</p>
                 <div class="flex gap-2">
-                   <span class="px-3 py-1 bg-white/5 rounded-md text-xs text-primary border border-primary/20">4 Kitap</span>
-                   <span class="px-3 py-1 bg-white/5 rounded-md text-xs text-primary border border-primary/20">2 Makale</span>
+                   <span class="px-3 py-1 bg-[#ecfeff] rounded-md text-xs text-[#0891b2] border border-[#0891b2]/20">4 Kitap</span>
+                   <span class="px-3 py-1 bg-[#ecfeff] rounded-md text-xs text-[#0891b2] border border-[#0891b2]/20">2 Makale</span>
                 </div>
             </div>
 
             <!-- Node 2 -->
              <div class="relative pl-8 group">
-                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-dark-bg border-2 border-secondary rounded-full group-hover:scale-125 group-hover:bg-secondary transition-all"></div>
-                <h4 class="text-lg font-bold text-white mb-2 group-hover:text-secondary transition-colors">Politik Teori</h4>
-                <p class="text-text-muted mb-4">Güç, adalet ve yönetim biçimleri.</p>
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-[#991b1b] rounded-full group-hover:scale-125 group-hover:bg-[#991b1b] transition-all"></div>
+                <h4 class="text-lg font-bold text-[#1e293b] mb-2 group-hover:text-[#991b1b] transition-colors">Politik Teori</h4>
+                <p class="text-[#1e293b]/70 mb-4">Güç, adalet ve yönetim biçimleri.</p>
                 <div class="flex gap-2">
-                   <span class="px-3 py-1 bg-white/5 rounded-md text-xs text-secondary border border-secondary/20">3 Kitap</span>
-                   <span class="px-3 py-1 bg-white/5 rounded-md text-xs text-secondary border border-secondary/20">1 Belgesel</span>
+                   <span class="px-3 py-1 bg-[#fff1f2] rounded-md text-xs text-[#991b1b] border border-[#991b1b]/20">3 Kitap</span>
+                   <span class="px-3 py-1 bg-[#fff1f2] rounded-md text-xs text-[#991b1b] border border-[#991b1b]/20">1 Belgesel</span>
                 </div>
             </div>
         </div>
