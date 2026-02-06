@@ -4,9 +4,9 @@ import { ArrowRight, BookOpen, Brain, PenTool } from 'lucide-react';
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
   <!-- Deep Space Background -->
-  <div class="absolute inset-0 z-0 bg-dark-bg">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] animate-pulse-slow"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] animate-pulse-slow delay-1000"></div>
+  <div class="absolute inset-0 z-0 bg-transparent">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#0891b2]/10 rounded-full blur-[128px] animate-pulse-slow"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#991b1b]/10 rounded-full blur-[128px] animate-pulse-slow delay-1000"></div>
   </div>
 
   <!-- Floating Icons (Antigravity Effect) -->
@@ -26,29 +26,29 @@ import { ArrowRight, BookOpen, Brain, PenTool } from 'lucide-react';
     
     <!-- Headline -->
     <div class="mb-8">
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
-        <span class="bg-clip-text text-transparent bg-linear-to-r from-primary via-white to-secondary">
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#0891b2] to-white">
           Fikirlerin Ağırlığı Yoktur,
         </span>
         <br />
         <span class="text-white">Havada Süzülürler.</span>
       </h1>
       
-      <p class="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto font-light leading-relaxed">
+      <p class="text-xl md:text-2xl text-[#94a3b8] max-w-2xl mx-auto font-light leading-relaxed">
         Okuyan, düşünen ve üretenlerin buluşma noktası.
       </p>
     </div>
 
     <!-- CTA Buttons -->
     <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-      <a href="#join" class="group relative px-8 py-4 bg-primary text-white rounded-xl font-semibold text-lg overflow-hidden shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:shadow-primary/40">
-        <div class="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
+      <a href="#join" class="group relative px-8 py-4 bg-gradient-to-r from-[#991b1b] to-[#7f1d1d] text-white rounded-xl font-semibold text-lg overflow-hidden shadow-[0_0_20px_rgba(153,27,27,0.5)] transition-all hover:scale-105">
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
         <span class="flex items-center gap-2">
           Topluluğa Katıl <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </span>
       </a>
 
-      <a href="#workshops-section" class="px-8 py-4 bg-transparent border-2 border-secondary text-white rounded-xl font-semibold text-lg hover:bg-secondary/10 hover:border-secondary transition-all flex items-center gap-2">
+      <a href="#workshops-section" class="px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-xl font-semibold text-lg hover:bg-white/10 transition-all flex items-center gap-2">
         Atölyeleri İncele
       </a>
     </div>
