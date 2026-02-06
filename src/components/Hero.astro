@@ -2,55 +2,68 @@
 import { ArrowRight, BookOpen, Brain, PenTool } from 'lucide-react';
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-  <!-- Deep Space Background -->
-  <div class="absolute inset-0 z-0 bg-dark-bg">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] animate-pulse-slow"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] animate-pulse-slow delay-1000"></div>
-  </div>
-
-  <!-- Floating Icons (Antigravity Effect) -->
-  <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20">
-    <div class="absolute top-1/3 left-[10%] animate-float" style="animation-duration: 8s;">
-      <BookOpen className="w-24 h-24 text-primary transform -rotate-12" />
-    </div>
-    <div class="absolute top-1/4 right-[15%] animate-float" style="animation-duration: 10s; animation-delay: 1s;">
-      <Brain className="w-32 h-32 text-white transform rotate-6" />
-    </div>
-    <div class="absolute bottom-1/3 left-[20%] animate-float" style="animation-duration: 12s; animation-delay: 2s;">
-      <PenTool className="w-20 h-20 text-secondary transform -rotate-45" />
-    </div>
-  </div>
-
-  <div class="container mx-auto px-6 relative z-10 text-center">
+<section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
     
-    <!-- Headline -->
-    <div class="mb-8">
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight max-w-4xl mx-auto">
-        <span class="bg-clip-text text-transparent bg-linear-to-r from-primary via-white to-secondary">
+    <!-- Left: Text Content -->
+    <div class="text-left space-y-8">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+        <span class="bg-clip-text text-transparent bg-linear-to-r from-[#0891b2] to-[#991b1b]">
           Fikirlerin Ağırlığı Yoktur,
         </span>
         <br />
         <span class="text-white">Havada Süzülürler.</span>
       </h1>
       
-      <p class="text-xl md:text-2xl text-text-muted max-w-2xl mx-auto font-light leading-relaxed">
-        Okuyan, düşünen ve üretenlerin buluşma noktası.
+      <p class="text-xl text-gray-400 font-light leading-relaxed max-w-lg">
+        Okuyan, düşünen ve üretenlerin buluşma noktası. Zifiri karanlıkta parlayan fikirler.
       </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#join" class="px-8 py-4 bg-[#0891b2] hover:bg-[#0891b2]/80 text-white rounded-xl font-semibold transition-all shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:shadow-[0_0_40px_rgba(8,145,178,0.5)]">
+          Topluluğa Katıl
+        </a>
+        <a href="#workshops-section" class="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-xl font-semibold transition-all backdrop-blur-md">
+          Atölyeleri İncele
+        </a>
+      </div>
     </div>
 
-    <!-- CTA Buttons -->
-    <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-12">
-      <a href="#join" class="group relative px-8 py-4 bg-primary text-white rounded-xl font-semibold text-lg overflow-hidden shadow-lg shadow-primary/25 transition-all hover:scale-105 hover:shadow-primary/40">
-        <div class="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
-        <span class="flex items-center gap-2">
-          Topluluğa Katıl <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </span>
-      </a>
+    <!-- Right: Glass Cards (Decorative Grid) -->
+    <div class="relative h-[600px] hidden md:block">
+      <!-- Card 1 -->
+      <div class="absolute top-10 left-10 w-64 h-80 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl transform -rotate-6 hover:rotate-0 transition-all duration-500 z-20">
+        <div class="w-12 h-12 bg-[#0891b2]/20 rounded-full flex items-center justify-center mb-4 text-[#0891b2]">
+          <BookOpen className="w-6 h-6" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Kitap Kulübü</h3>
+        <p class="text-gray-400 text-sm">Derin okumalar ve analizler için bir araya geliyoruz.</p>
+        <div class="absolute bottom-6 w-full h-1 bg-linear-to-r from-[#0891b2] to-transparent opacity-50"></div>
+      </div>
 
-      <a href="#workshops-section" class="px-8 py-4 bg-transparent border-2 border-secondary text-white rounded-xl font-semibold text-lg hover:bg-secondary/10 hover:border-secondary transition-all flex items-center gap-2">
-        Atölyeleri İncele
-      </a>
+      <!-- Card 2 -->
+      <div class="absolute top-40 right-10 w-64 h-80 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl transform rotate-6 hover:rotate-0 transition-all duration-500 z-10">
+        <div class="w-12 h-12 bg-[#991b1b]/20 rounded-full flex items-center justify-center mb-4 text-[#991b1b]">
+          <Brain className="w-6 h-6" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Fikir Atölyesi</h3>
+        <p class="text-gray-400 text-sm">Sınırları zorlayan düşünceler ve tartışmalar.</p>
+        <div class="absolute bottom-6 w-full h-1 bg-linear-to-r from-[#991b1b] to-transparent opacity-50"></div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="absolute bottom-20 left-20 w-72 h-40 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl transform -rotate-3 hover:scale-105 transition-all duration-500 z-30">
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white">
+                <PenTool className="w-5 h-5" />
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-white">Yazarlık</h3>
+                <p class="text-xs text-gray-400">Kelimelerin gücü.</p>
+            </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>

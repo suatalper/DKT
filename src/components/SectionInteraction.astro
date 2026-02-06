@@ -34,14 +34,14 @@ const discussions = [
 
             <div class="space-y-4">
                 {events.map((event) => (
-                    <div class="group flex items-center gap-6 bg-dark-surface p-4 rounded-xl border border-white/5 hover:border-primary/50 transition-all hover:bg-white/5 cursor-pointer">
-                        <div class="flex flex-col items-center justify-center w-16 h-16 bg-white/5 rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div class="group flex items-center gap-6 bg-white/5 backdrop-blur-xl p-4 rounded-xl border border-white/10 hover:border-[#0891b2]/50 transition-all hover:bg-white/10 cursor-pointer">
+                        <div class="flex flex-col items-center justify-center w-16 h-16 bg-white/5 rounded-lg group-hover:bg-[#0891b2] group-hover:text-white transition-colors">
                             <span class="text-xs font-bold uppercase">{event.month}</span>
                             <span class="text-xl font-bold">{event.day}</span>
                         </div>
                         <div class="flex-1">
-                            <h4 class="text-lg font-bold text-white group-hover:text-primary transition-colors">{event.title}</h4>
-                            <div class="flex items-center gap-4 text-sm text-text-muted mt-1">
+                            <h4 class="text-lg font-bold text-white group-hover:text-[#0891b2] transition-colors">{event.title}</h4>
+                            <div class="flex items-center gap-4 text-sm text-gray-400 mt-1">
                                 <span>{event.time}</span>
                                 <span class="w-1 h-1 bg-white/20 rounded-full"></span>
                                 <span>{event.type}</span>
@@ -51,7 +51,7 @@ const discussions = [
                 ))}
             </div>
             
-             <button class="mt-8 text-primary hover:text-white font-medium flex items-center gap-2 transition-colors">
+             <button class="mt-8 text-[#0891b2] hover:text-white font-medium flex items-center gap-2 transition-colors">
                 Tüm Etkinlikleri Gör →
             </button>
         </div>
@@ -59,11 +59,11 @@ const discussions = [
         <!-- Forum Highlights -->
         <div>
             <div class="flex items-center gap-2 mb-8">
-                <Hash className="w-6 h-6 text-secondary" />
+                <Hash className="w-6 h-6 text-[#991b1b]" />
                 <h3 class="text-2xl font-bold text-white">Gündemdeki Tartışmalar</h3>
             </div>
 
-            <div class="bg-dark-surface/50 rounded-2xl border border-white/5 overflow-hidden">
+            <div class="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
                 {discussions.map((topic, index) => (
                     <div class={`p-5 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer border-b border-white/5 last:border-0`}>
                         <div>
