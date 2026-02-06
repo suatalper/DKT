@@ -7,6 +7,6 @@
   }
 
   body {
-    @apply bg-dark-bg text-text-main font-sans antialiased;
+    @apply bg-[#020617] text-[#cbd5e1] font-sans antialiased;
   }
 }
