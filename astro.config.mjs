@@ -10,8 +10,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     build: {
-      target: "es2015",
-      cssTarget: "chrome61",
+      target: "es2020",
     },
   },
 
