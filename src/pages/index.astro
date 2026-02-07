@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
@@ -11,18 +12,52 @@ import SectionAbout from '../components/SectionAbout.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
-  <Navbar />
-  
-  <main class="grow">
-    <Hero />
-    <SectionBook />
-    <SectionBrain />
-    <SectionInteraction />
-    <SectionPen />
-    <SectionWorkshops />
-    <SectionAbout />
-  </main>
+<main class="h-screen w-full bg-slate-950 text-white flex flex-col items-center gap-10">
+<div class="text-center space-y-4">
+  <h1 class=" text-5xl font-bold  tracking-tight">DKT TASARIMLARI</h1>
+</h1>
+<p class="text-slate-400 text-lg">DEMOLAR</p>
+</div>
 
-  <Footer />
-</Layout>
+<div class="flex flex-col md:flex-row gap-6">
+  <a href="/demo1" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded">
+    Demo 1
+  </a>
+  <a href="/demo2" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded">
+    Demo 2
+  </a>
+  <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 3  
+  </a>
+   <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 4 
+  </a>
+   <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 5 
+  </a>
+   <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 6  
+  </a>
+   <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 7
+  </a>
+   <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 8  
+  </a>
+   <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 9  
+  </a>
+   <a href="/demo3" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Demo 10
+  </a>
+
+</div>
+</main>
