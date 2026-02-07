@@ -1,67 +1,48 @@
 ---
-import "../styles/global.css";
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import SectionBook from '../components/SectionBook.astro';
-import SectionBrain from '../components/SectionBrain.astro';
-import SectionInteraction from '../components/SectionInteraction.astro';
-import SectionPen from '../components/SectionPen.astro';
-import SectionWorkshops from '../components/SectionWorkshops.astro';
-import SectionAbout from '../components/SectionAbout.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<main class="h-screen w-full bg-slate-950 text-white flex flex-col items-center gap-10">
-<div class="text-center space-y-4">
-  <h1 class=" text-5xl font-bold  tracking-tight">DKT TASARIMLARI</h1>
-</h1>
-<p class="text-slate-400 text-lg">DEMOLAR</p>
-</div>
+<Layout>
+  <main class="min-h-screen w-full bg-slate-950 text-white flex flex-col items-center justify-center py-12 px-4 gap-10">
+    <div class="text-center space-y-4">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">DKT TASARIMLARI</h1>
+      <p class="text-slate-400 text-lg">DEMOLAR</p>
+    </div>
 
-<div class="flex flex-col md:flex-row gap-6">
-  <a href="https://dusuncekitaptoplulugu-git-design-mo-929ccd-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded">
-    Modern Dark
-  </a>
-  <a href="https://dusuncekitaptoplulugu-git-design-ne-77ee2e-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded">
-    Neo-Brutulism
-  </a>
-  <a href="https://dusuncekitaptoplulugu-git-redsign-m-2bf3ca-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Modern and Clean
-  </a>
-   <a href="https://dusuncekitaptoplulugu-git-aurora-de-43e2cd-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Aurora VOL 4 
-  </a>
-   <a href="https://dusuncekitaptoplulugu-git-design-aurora-v3-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Aurora VOL 3
-  </a>
-   <a href="https://dusuncekitaptoplulugu-git-redesign-c8b85e-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Bold Fusion
-  </a>
-   <a href="https://dusuncekitaptoplulugu-git-design-sw-057683-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Swiss Style
-  </a>
-   <a href="https://dusuncekitaptoplulugu-git-vintage-design-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Vinatage Design
-  </a>
-   <a href="https://dusuncekitaptoplulugu-git-colorfull-vivid-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Vivid Colors 
-  </a>
-   <a href="https://dusuncekitaptoplulugu-git-redesign-minimal-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Extra Minimal
-  </a>
-  <a href="https://dusuncekitaptoplulugu-git-redesign-social-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded"
-  >
-    Social Design
-  </a>
-
-</div>
-</main>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+      <a href="https://dusuncekitaptoplulugu-git-design-mo-929ccd-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Modern Dark
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-design-ne-77ee2e-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Neo-Brutulism
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-redsign-m-2bf3ca-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Modern and Clean
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-aurora-de-43e2cd-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Aurora VOL 4 
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-design-aurora-v3-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Aurora VOL 3
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-redesign-c8b85e-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Bold Fusion
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-design-sw-057683-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Swiss Style
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-vintage-design-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Vinatage Design
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-colorfull-vivid-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Vivid Colors 
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-redesign-minimal-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Extra Minimal
+      </a>
+      <a href="https://dusuncekitaptoplulugu-git-redesign-social-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300">
+        Social Design
+      </a>
+    </div>
+  </main>
+</Layout>
