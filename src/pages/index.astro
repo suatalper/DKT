@@ -3,13 +3,81 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <main class="min-h-screen w-full bg-slate-950 text-white flex flex-col items-center justify-start md:justify-center py-8 md:py-12 px-4 gap-6 md:gap-10">
-    <div class="text-center space-y-2 md:space-y-4 pt-10 md:pt-0">
-      <h1 class="text-2xl md:text-5xl lg:text-6xl font-bold tracking-tight">DKT TASARIMLARI</h1>
-      <p class="text-slate-400 text-base md:text-lg">DEMOLAR</p>
+  <main class="min-h-screen w-full  text-white flex flex-col items-center justify-start py-8 md:py-16 px-4 sm:px-6 lg:px-8 gap-8 md:gap-12">
+    <div class="text-center space-y-3 md:space-y-5 pt-6 md:pt-0 max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">DKT TASARIMLARI</h1>
+      <p class="text-slate-400 text-lg sm:text-xl font-medium tracking-wide">DEMOLAR</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-6xl">
+    <div class="w-full max-w-5xl mx-auto space-y-8 md:space-y-12">
+      <div class="text-slate-300 text-base sm:text-lg leading-relaxed text-center max-w-3xl mx-auto">
+        <p class="mb-4">
+          Merhaba arkadaşlar, aşağıda görmüş olduğunuz tasarımlar topluluğumuzun web sitesi için yapmış olduğum tema seçenekleri.
+          Bunlardan birini sizle birlikte seçeceğiz. Butonlara bastığınızda siteler açılacak. Sitelerin içerisine içerik olarak yapay zeka ile rastgele şeyler yerleştirdim.
+        </p>
+        <p class="mb-4">
+          Bunlara aldırış etmeyin, sadece tasarımlara bakın ve beğendiğiniz tasarımı seçin. Tasarımlar arasında gezinmek için butonlara tıklayabilirsiniz.
+          İçerik kısmı içinse hep birlikte tartışıp seçim yapacağız.
+        </p>
+        <p class="font-semibold text-white mt-6">
+          BENİM ÖNERİM OLARAK ŞU İÇERİKLER İLGİMİ ÇEKTİ:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-left">
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <h3 class="text-xl font-semibold mb-2 text-primary-400">Blog Makale Alanı</h3>
+          <p class="text-slate-400">Bu kısımda her hafta birimiz makale yazacağız ve bu makaleler topluluğumuzun web sitesinde yer alacak.</p>
+        </div>
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <h3 class="text-xl font-semibold mb-2 text-primary-400">Etkinlik Alanı</h3>
+          <p class="text-slate-400">Yaptığımız etkinlikler burada listelenecek, böylece burada daha kalıcı olacak ve bizden yıllar sonra gelenler bile geçmişe bakabilecek.</p>
+        </div>
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <h3 class="text-xl font-semibold mb-2 text-primary-400">Etkinlik Duyuruları</h3>
+          <p class="text-slate-400">Burada yapacağımız etkinliklerin duyuruları yer alacak.</p>
+        </div>
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <h3 class="text-xl font-semibold mb-2 text-primary-400">Atölyeler</h3>
+          <p class="text-slate-400">Bu kısımda yapacağımız atölyelerin duyuruları ve kayıt linkleri yer alacak.</p>
+        </div>
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+            <h3 class="text-xl font-semibold mb-2 text-primary-400">Yönetim Ekibi</h3>
+            <p class="text-slate-400">Bu kısımda topluluğumuzun yönetim ekibinin bilgileri yer alacak.</p>
+        </div>
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <h3 class="text-xl font-semibold mb-2 text-primary-400">Etkinlik Fotoğrafları</h3>
+          <p class="text-slate-400">Burada etkinliklerimizde çektiğimiz fotoğrafları paylaşacağız.</p>
+        </div>
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <h3 class="text-xl font-semibold mb-2 text-primary-400">Amacımız</h3>
+          <p class="text-slate-400">DKT vizyonu ve amacını burada anlatacağız.</p>
+        </div>
+        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <h3 class="text-xl font-semibold mb-2 text-primary-400">İletişim ve Katılım</h3>
+          <p class="text-slate-400">Burada insanlar bizimle iletişime geçebilecek ve topluluğumuza giriş yapabilecekler.</p>
+        </div>
+      </div>
+      </div>
+      <div class="bg-slate-900 p-6 md:p-8 rounded-2xl border border-slate-800">
+        <h3 class="text-xl font-semibold mb-6 text-center text-white">Tasarım Seçenekleri</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300">
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Modern Dark:</strong> Koyu temalı, modern ve şık bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Neo-Brutulism:</strong> Cesur, bloklu ve kontrastlı bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Modern and Clean:</strong> Minimalist, temiz ve kullanıcı dostu bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Aurora VOL 4:</strong> Renkli, canlı ve dinamik bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Aurora VOL 3:</strong> Renk geçişleriyle zenginleştirilmiş, modern bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Bold Fusion:</strong> Cesur renkler ve modern çizgilerle harmanlanmış bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Swiss Style:</strong> Düzenli, tipografik ve minimalist bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Vintage Design:</strong> Retro esintili, nostaljik bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Vivid Colors:</strong> Canlı renklerle dolu, enerjik bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Extra Minimal:</strong> Aşırı minimal, sadece temel öğelerle oluşturulmuş bir tasarım.</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Social Design:</strong> Sosyal medya odaklı, etkileşimli bir tasarım.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-6xl mt-8">
       <a href="https://dusuncekitaptoplulugu-git-design-mo-929ccd-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
         Modern Dark
       </a>
