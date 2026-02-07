@@ -21,7 +21,7 @@ import { Github, Twitter, Instagram, ArrowUpRight } from 'lucide-react';
             { icon: Instagram, href: "#" }
         ].map((social) => (
             <a href={social.href} class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center text-slate-400 hover:bg-white hover:text-slate-900 hover:scale-110 transition-all duration-300">
-                <social.icon class="w-5 h-5" />
+                <social.icon className="w-5 h-5" />
             </a>
         ))}
       </div>
@@ -31,7 +31,7 @@ import { Github, Twitter, Instagram, ArrowUpRight } from 'lucide-react';
         {['Manifesto', 'Kütüphane', 'Atölyeler', 'İletişim'].map((item) => (
             <a href="#" class="text-slate-400 font-bold hover:text-white transition-colors flex items-center gap-2 group">
                 {item}
-                <ArrowUpRight class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-teal-500" />
+                <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-teal-500" />
             </a>
         ))}
     </div>
