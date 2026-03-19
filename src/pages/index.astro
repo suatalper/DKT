@@ -1,140 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import SectionBook from '../components/SectionBook.astro';
+import SectionBrain from '../components/SectionBrain.astro';
+import SectionInteraction from '../components/SectionInteraction.astro';
+import SectionPen from '../components/SectionPen.astro';
+import SectionWorkshops from '../components/SectionWorkshops.astro';
+import SectionAbout from '../components/SectionAbout.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-  <main class="min-h-screen w-full  text-white flex flex-col items-center justify-start py-8 md:py-16 px-4 sm:px-6 lg:px-8 gap-8 md:gap-12">
-    <div class="text-center space-y-3 md:space-y-5 pt-6 md:pt-0 max-w-4xl mx-auto">
-      <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">DKT TASARIMLARI</h1>
-      <p class="text-slate-400 text-lg sm:text-xl font-medium tracking-wide">DEMOLAR</p>
-    </div>
-
-    <div class="w-full max-w-5xl mx-auto space-y-8 md:space-y-12">
-      <div class="text-slate-300 text-base sm:text-lg leading-relaxed text-center max-w-3xl mx-auto">
-        <p class="mb-4">
-          Merhaba arkadaşlar, aşağıda görmüş olduğunuz tasarımlar topluluğumuzun web sitesi için yapmış olduğum tema seçenekleri.
-          Bunlardan birini sizle birlikte seçeceğiz. Butonlara bastığınızda siteler açılacak. Sitelerin içerisine içerik olarak yapay zeka ile rastgele şeyler yerleştirdim.
-        </p>
-        <p class="mb-4">
-          Bunlara aldırış etmeyin, sadece tasarımlara bakın ve beğendiğiniz tasarımı seçin. Tasarımlar arasında gezinmek için butonlara tıklayabilirsiniz.
-          İçerik kısmı içinse hep birlikte tartışıp seçim yapacağız.
-        </p>
-        <p class="font-semibold text-white mt-6">
-          BENİM ÖNERİM OLARAK ŞU İÇERİKLER İLGİMİ ÇEKTİ:
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-left">
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2 text-primary-400">Blog Makale Alanı</h3>
-          <p class="text-slate-400">Bu kısımda her hafta birimiz makale yazacağız ve bu makaleler topluluğumuzun web sitesinde yer alacak.</p>
-        </div>
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2 text-primary-400">Etkinlik Alanı</h3>
-          <p class="text-slate-400">Yaptığımız etkinlikler burada listelenecek, böylece burada daha kalıcı olacak ve bizden yıllar sonra gelenler bile geçmişe bakabilecek.</p>
-        </div>
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2 text-primary-400">Etkinlik Duyuruları</h3>
-          <p class="text-slate-400">Burada yapacağımız etkinliklerin duyuruları yer alacak.</p>
-        </div>
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2 text-primary-400">Atölyeler</h3>
-          <p class="text-slate-400">Bu kısımda yapacağımız atölyelerin duyuruları ve kayıt linkleri yer alacak.</p>
-        </div>
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-            <h3 class="text-xl font-semibold mb-2 text-primary-400">Yönetim Ekibi</h3>
-            <p class="text-slate-400">Bu kısımda topluluğumuzun yönetim ekibinin bilgileri yer alacak.</p>
-        </div>
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2 text-primary-400">Etkinlik Fotoğrafları</h3>
-          <p class="text-slate-400">Burada etkinliklerimizde çektiğimiz fotoğrafları paylaşacağız.</p>
-        </div>
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2 text-primary-400">Amacımız</h3>
-          <p class="text-slate-400">DKT vizyonu ve amacını burada anlatacağız.</p>
-        </div>
-        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
-          <h3 class="text-xl font-semibold mb-2 text-primary-400">İletişim ve Katılım</h3>
-          <p class="text-slate-400">Burada insanlar bizimle iletişime geçebilecek ve topluluğumuza giriş yapabilecekler.</p>
-        </div>
-      </div>
-      </div>
-      <div class="bg-slate-900 p-6 md:p-8 rounded-2xl border border-slate-800">
-        <h3 class="text-xl font-semibold mb-6 text-center text-white">Tasarım Seçenekleri</h3>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300">
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Modern Dark:</strong> Koyu temalı, modern ve şık bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Neo-Brutulism:</strong> Cesur, bloklu ve kontrastlı bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Modern and Clean:</strong> Minimalist, temiz ve kullanıcı dostu bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Aurora VOL 4:</strong> Renkli, canlı ve dinamik bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Aurora VOL 3:</strong> Renk geçişleriyle zenginleştirilmiş, modern bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Bold Fusion:</strong> Cesur renkler ve modern çizgilerle harmanlanmış bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Swiss Style:</strong> Düzenli, tipografik ve minimalist bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Vintage Design:</strong> Retro esintili, nostaljik bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Vivid Colors:</strong> Canlı renklerle dolu, enerjik bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Extra Minimal:</strong> Aşırı minimal, sadece temel öğelerle oluşturulmuş bir tasarım.</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary-400 mt-1">•</span><span><strong>Social Design:</strong> Sosyal medya odaklı, etkileşimli bir tasarım.</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-6xl mt-8">
-      <a href="https://dusuncekitaptoplulugu-git-design-mo-929ccd-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        Modern Dark
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-design-ne-77ee2e-suat-alpers-projects.vercel.app" target="_blank" class="relative group bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        <div class="absolute -top-3 -right-3 text-yellow-400 bg-slate-900 rounded-full p-1 border border-slate-700 shadow-md transform rotate-12 z-10 group-hover:scale-110 transition-transform">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg whitespace-nowrap pointer-events-none z-20 transform translate-y-2 group-hover:translate-y-0 before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-black">
-          Başkanın favorisi
-        </div>
-        Neo-Brutulism
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-redsign-m-2bf3ca-suat-alpers-projects.vercel.app" target="_blank" class="relative group bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        <div class="absolute -top-3 -right-3 text-yellow-400 bg-slate-900 rounded-full p-1 border border-slate-700 shadow-md transform rotate-12 z-10 group-hover:scale-110 transition-transform">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg whitespace-nowrap pointer-events-none z-20 transform translate-y-2 group-hover:translate-y-0 before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-black">
-          Başkanın favorisi
-        </div>
-        Modern and Clean
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-aurora-de-43e2cd-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        Aurora VOL 4 
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-design-aurora-v3-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        Aurora VOL 3
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-redesign-c8b85e-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        Bold Fusion
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-design-sw-057683-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        Swiss Style
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-vintage-design-suat-alpers-projects.vercel.app" target="_blank" class="relative group bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        <div class="absolute -top-3 -right-3 text-yellow-400 bg-slate-900 rounded-full p-1 border border-slate-700 shadow-md transform rotate-12 z-10 group-hover:scale-110 transition-transform">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg whitespace-nowrap pointer-events-none z-20 transform translate-y-2 group-hover:translate-y-0 before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-black">
-          Başkanın favorisi
-        </div>
-        Vinatage Design
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-colorfull-vivid-suat-alpers-projects.vercel.app" target="_blank" class="relative group bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        <div class="absolute -top-3 -right-3 text-yellow-400 bg-slate-900 rounded-full p-1 border border-slate-700 shadow-md transform rotate-12 z-10 group-hover:scale-110 transition-transform">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white text-xs font-bold py-1 px-3 rounded-full shadow-lg whitespace-nowrap pointer-events-none z-20 transform translate-y-2 group-hover:translate-y-0 before:content-[''] before:absolute before:top-full before:left-1/2 before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-black">
-          Başkanın favorisi
-        </div>
-        Vivid Colors 
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-redesign-minimal-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        Extra Minimal
-      </a>
-      <a href="https://dusuncekitaptoplulugu-git-redesign-social-suat-alpers-projects.vercel.app" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 md:py-4 px-4 md:px-6 rounded-lg text-center transition duration-300 text-sm md:text-base">
-        Social Design
-      </a>
-    </div>
+  <Navbar />
+  
+  <main class="grow">
+    <Hero />
+    <SectionBook />
+    <SectionBrain />
+    <SectionInteraction />
+    <SectionPen />
+    <SectionWorkshops />
+    <SectionAbout />
   </main>
+
+  <Footer />
 </Layout>
